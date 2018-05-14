@@ -1,0 +1,45 @@
+{
+  "name": "tictactoe",
+  "version": "0.1.0",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-react-app": "^2.1.0",
+    "lint-staged": "^7.1.0",
+    "prettier": "^1.12.1"
+  },
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "lint:staged": "lint-staged",
+    "lint": "eslint --ignore-pattern '!.eslintrc.js' src/*",
+    "eject": "react-scripts eject"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add",
+      "yarn lint:eslint"
+    ],
+    "*.{css, json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "pre-commit": "lint:staged",
+  "babel": {
+    "presets": [
+      "env",
+      "stage-0",
+      "react-app"
+    ]
+  }
+}
