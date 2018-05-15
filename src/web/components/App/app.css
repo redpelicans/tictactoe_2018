@@ -1,0 +1,8 @@
+.start-button {
+  display: inline-block;
+}
+
+.content {
+  min-height: 55vh;
+  margin-top: 30px;
+}
