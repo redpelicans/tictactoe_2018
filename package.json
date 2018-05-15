@@ -71,7 +71,7 @@
     "bundle:stats": "NODE_ENV=production webpack --config config/webpack.config.prod.js --profile --json > stats.json",
     "bundle:analyse": "webpack-bundle-analyzer ./stats.json ./build --report --mode=static",
     "lint:staged": "lint-staged",
-    "lint:eslint": "eslint --ignore-pattern '!.eslintrc.js'",
+    "lint:eslint": "eslint --ignore-pattern '!.eslintrc.js' --config .eslintrc.js",
     "lint": "eslint --ignore-pattern '!.eslintrc.js' src/*",
     "test:e2e": "jest --no-cache --config=jest.config.e2e.js src/*"
   },

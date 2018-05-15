@@ -2,4 +2,5 @@ coverage
 build
 node_modules
 stats.json
-config.old
+config
+scripts
