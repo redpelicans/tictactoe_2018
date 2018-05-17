@@ -3,18 +3,39 @@
 ## Install
 
 ```
-$ npm install -g yarn babel-cli
-$ yarn install
+$ npm install -g yarn
+$ git clone https://github.com/redpelicans/tictactoe_2018.git
+$ yarn
 ```
 
 ## Launch development mode
 
 ```
-$ yarn build:dev
-Project is running at http://0.0.0.0:3001/
-webpack output is served from /build/
-Content not from webpack is served from ./public
-404s will fallback to /index.html
+$ yarn start
+You can now view tictactoe in the browser.
+	Local: http://localhost:3002/
 ```
 
-And launch your preferred browser on http://0.0.0.0:3001
+And launch your preferred browser on http://localhost:3002/
+
+
+## Unit tests
+
+```
+$ yarn test
+$ yarn test --coverage
+```
+
+## End to end tests
+
+```
+$ yarn build
+$ yarn test:e2e
+```
+
+## Bundle analyse
+
+```
+$ yarn bundle:stats
+$ yarn bundle:analyse
+```
