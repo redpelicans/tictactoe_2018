@@ -5,6 +5,7 @@ import { BoardPanel, Board, Cell, Message } from '../';
 const state = {
   board: ['x', 'x', 'x'],
   currentPlayer: { name: 'Toto' },
+  computerPlay: new Function(),
 };
 
 describe('<Board/>', () => {

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Button, Grid, Row, Col } from 'react-bootstrap';
+import { isBoardFull } from '../../game';
 import './board.css';
 
 export const Message = ({ currentPlayer }) => {
@@ -25,26 +26,34 @@ Cell.propTypes = {
   piece: PropTypes.string,
 };
 
-export const Board = ({ board }) => (
-  <Grid className="board">
-    <Row>
-      {/* eslint-disable react/no-array-index-key */}
-      {board.map((piece, i) => <Cell key={i} piece={piece} />)}
-    </Row>
-  </Grid>
+export const Board = ({ board, computerPlay }) => (
+  <div>
+    <Grid className="board">
+      <Row>
+        {/* eslint-disable react/no-array-index-key */}
+        {board.map((piece, i) => <Cell key={i} piece={piece} />)}
+      </Row>
+      <Row>
+        <Button className="computerPlay" disabled={isBoardFull(board)} onClick={computerPlay}>
+          Computer Play
+        </Button>
+      </Row>
+    </Grid>
+  </div>
 );
 
 Board.propTypes = {
   board: PropTypes.array.isRequired,
+  computerPlay: PropTypes.func.isRequired,
 };
 
-export const BoardPanel = ({ board, currentPlayer }) => (
+export const BoardPanel = ({ board, currentPlayer, computerPlay }) => (
   <Grid className="panel">
     <Row>
       <Message currentPlayer={currentPlayer} />
     </Row>
     <Row>
-      <Board board={board} />
+      <Board board={board} computerPlay={computerPlay} />
     </Row>
   </Grid>
 );
@@ -52,4 +61,5 @@ export const BoardPanel = ({ board, currentPlayer }) => (
 BoardPanel.propTypes = {
   board: PropTypes.array.isRequired,
   currentPlayer: PropTypes.object,
+  computerPlay: PropTypes.func,
 };

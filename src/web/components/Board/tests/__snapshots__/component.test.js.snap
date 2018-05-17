@@ -12,6 +12,7 @@ ShallowWrapper {
         "x",
       ]
     }
+    computerPlay={[Function]}
     currentPlayer={
       Object {
         "name": "Toto",
@@ -56,6 +57,7 @@ ShallowWrapper {
                 "x",
               ]
             }
+            computerPlay={[Function]}
           />
         </Row>,
       ],
@@ -110,6 +112,7 @@ ShallowWrapper {
                 "x",
               ]
             }
+            computerPlay={[Function]}
           />,
           "componentClass": "div",
         },
@@ -124,6 +127,7 @@ ShallowWrapper {
               "x",
               "x",
             ],
+            "computerPlay": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -166,6 +170,7 @@ ShallowWrapper {
                   "x",
                 ]
               }
+              computerPlay={[Function]}
             />
           </Row>,
         ],
@@ -220,6 +225,7 @@ ShallowWrapper {
                   "x",
                 ]
               }
+              computerPlay={[Function]}
             />,
             "componentClass": "div",
           },
@@ -234,6 +240,7 @@ ShallowWrapper {
                 "x",
                 "x",
               ],
+              "computerPlay": [Function],
             },
             "ref": null,
             "rendered": null,

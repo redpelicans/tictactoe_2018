@@ -88,81 +88,88 @@ ShallowWrapper {
           className="content"
           componentClass="div"
         >
-          <Row
-            bsClass="row"
+          <Grid
+            bsClass="container"
             componentClass="div"
+            fluid={false}
           >
-            <Col
-              bsClass="col"
+            <Row
+              bsClass="row"
               componentClass="div"
-              md={4}
-              xs={12}
             >
-              <PiePanel
-                history={
-                  Array [
-                    Object {
-                      "id": 1,
-                      "winner": Object {
-                        "name": "NAME",
+              <Col
+                bsClass="col"
+                componentClass="div"
+                md={4}
+                xs={12}
+              >
+                <PiePanel
+                  history={
+                    Array [
+                      Object {
+                        "id": 1,
+                        "winner": Object {
+                          "name": "NAME",
+                        },
                       },
-                    },
-                  ]
-                }
-                player={
-                  Object {
-                    "name": "NAME",
+                    ]
                   }
-                }
-              />
-            </Col>
-            <Col
-              bsClass="col"
-              componentClass="div"
-              md={4}
-              xs={12}
-            >
-              <Unknown
-                board={
-                  Array [
-                    "x",
-                    "o",
-                    "x",
-                    null,
-                    null,
-                    "x",
-                    "o",
-                    null,
-                    null,
-                  ]
-                }
-                currentPlayer={
-                  Object {
-                    "name": "NAME",
-                  }
-                }
-              />
-            </Col>
-            <Col
-              bsClass="col"
-              componentClass="div"
-              md={4}
-              xs={12}
-            >
-              <Unknown
-                history={
-                  Array [
+                  player={
                     Object {
-                      "id": 1,
-                      "winner": Object {
-                        "name": "NAME",
+                      "name": "NAME",
+                    }
+                  }
+                />
+              </Col>
+              <Col
+                bsClass="col"
+                componentClass="div"
+                md={4}
+                xs={12}
+              >
+                <Unknown
+                  board={
+                    Array [
+                      "x",
+                      "o",
+                      "x",
+                      null,
+                      null,
+                      "x",
+                      "o",
+                      null,
+                      null,
+                    ]
+                  }
+                  computerPlay={[Function]}
+                  currentPlayer={
+                    Object {
+                      "name": "NAME",
+                    }
+                  }
+                />
+              </Col>
+              <Col
+                bsClass="col"
+                componentClass="div"
+                md={4}
+                xs={12}
+              >
+                <Unknown
+                  history={
+                    Array [
+                      Object {
+                        "id": 1,
+                        "winner": Object {
+                          "name": "NAME",
+                        },
                       },
-                    },
-                  ]
-                }
-              />
-            </Col>
-          </Row>
+                    ]
+                  }
+                />
+              </Col>
+            </Row>
+          </Grid>
         </Jumbotron>,
       ],
       "componentClass": "div",
@@ -274,361 +281,10 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "bsClass": "jumbotron",
-          "children": <Row
-            bsClass="row"
+          "children": <Grid
+            bsClass="container"
             componentClass="div"
-          >
-            <Col
-              bsClass="col"
-              componentClass="div"
-              md={4}
-              xs={12}
-            >
-              <PiePanel
-                history={
-                  Array [
-                    Object {
-                      "id": 1,
-                      "winner": Object {
-                        "name": "NAME",
-                      },
-                    },
-                  ]
-                }
-                player={
-                  Object {
-                    "name": "NAME",
-                  }
-                }
-              />
-            </Col>
-            <Col
-              bsClass="col"
-              componentClass="div"
-              md={4}
-              xs={12}
-            >
-              <Unknown
-                board={
-                  Array [
-                    "x",
-                    "o",
-                    "x",
-                    null,
-                    null,
-                    "x",
-                    "o",
-                    null,
-                    null,
-                  ]
-                }
-                currentPlayer={
-                  Object {
-                    "name": "NAME",
-                  }
-                }
-              />
-            </Col>
-            <Col
-              bsClass="col"
-              componentClass="div"
-              md={4}
-              xs={12}
-            >
-              <Unknown
-                history={
-                  Array [
-                    Object {
-                      "id": 1,
-                      "winner": Object {
-                        "name": "NAME",
-                      },
-                    },
-                  ]
-                }
-              />
-            </Col>
-          </Row>,
-          "className": "content",
-          "componentClass": "div",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "bsClass": "row",
-            "children": Array [
-              <Col
-                bsClass="col"
-                componentClass="div"
-                md={4}
-                xs={12}
-              >
-                <PiePanel
-                  history={
-                    Array [
-                      Object {
-                        "id": 1,
-                        "winner": Object {
-                          "name": "NAME",
-                        },
-                      },
-                    ]
-                  }
-                  player={
-                    Object {
-                      "name": "NAME",
-                    }
-                  }
-                />
-              </Col>,
-              <Col
-                bsClass="col"
-                componentClass="div"
-                md={4}
-                xs={12}
-              >
-                <Unknown
-                  board={
-                    Array [
-                      "x",
-                      "o",
-                      "x",
-                      null,
-                      null,
-                      "x",
-                      "o",
-                      null,
-                      null,
-                    ]
-                  }
-                  currentPlayer={
-                    Object {
-                      "name": "NAME",
-                    }
-                  }
-                />
-              </Col>,
-              <Col
-                bsClass="col"
-                componentClass="div"
-                md={4}
-                xs={12}
-              >
-                <Unknown
-                  history={
-                    Array [
-                      Object {
-                        "id": 1,
-                        "winner": Object {
-                          "name": "NAME",
-                        },
-                      },
-                    ]
-                  }
-                />
-              </Col>,
-            ],
-            "componentClass": "div",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "bsClass": "col",
-                "children": <PiePanel
-                  history={
-                    Array [
-                      Object {
-                        "id": 1,
-                        "winner": Object {
-                          "name": "NAME",
-                        },
-                      },
-                    ]
-                  }
-                  player={
-                    Object {
-                      "name": "NAME",
-                    }
-                  }
-                />,
-                "componentClass": "div",
-                "md": 4,
-                "xs": 12,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "history": Array [
-                    Object {
-                      "id": 1,
-                      "winner": Object {
-                        "name": "NAME",
-                      },
-                    },
-                  ],
-                  "player": Object {
-                    "name": "NAME",
-                  },
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "bsClass": "col",
-                "children": <Unknown
-                  board={
-                    Array [
-                      "x",
-                      "o",
-                      "x",
-                      null,
-                      null,
-                      "x",
-                      "o",
-                      null,
-                      null,
-                    ]
-                  }
-                  currentPlayer={
-                    Object {
-                      "name": "NAME",
-                    }
-                  }
-                />,
-                "componentClass": "div",
-                "md": 4,
-                "xs": 12,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "board": Array [
-                    "x",
-                    "o",
-                    "x",
-                    null,
-                    null,
-                    "x",
-                    "o",
-                    null,
-                    null,
-                  ],
-                  "currentPlayer": Object {
-                    "name": "NAME",
-                  },
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "bsClass": "col",
-                "children": <Unknown
-                  history={
-                    Array [
-                      Object {
-                        "id": 1,
-                        "winner": Object {
-                          "name": "NAME",
-                        },
-                      },
-                    ]
-                  }
-                />,
-                "componentClass": "div",
-                "md": 4,
-                "xs": 12,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "history": Array [
-                    Object {
-                      "id": 1,
-                      "winner": Object {
-                        "name": "NAME",
-                      },
-                    },
-                  ],
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              "type": [Function],
-            },
-          ],
-          "type": [Function],
-        },
-        "type": [Function],
-      },
-    ],
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "bsClass": "container",
-        "children": Array [
-          <Unknown
-            player={
-              Object {
-                "name": "NAME",
-              }
-            }
-          >
-            <Unknown>
-              <Unknown
-                type="trophy"
-              />
-              <Unknown
-                name="TicTacToe"
-              />
-            </Unknown>
-            <Unknown>
-              <StartButton
-                status="GAME_OVER"
-              >
-                Start The Game
-              </StartButton>
-            </Unknown>
-          </Unknown>,
-          <Jumbotron
-            bsClass="jumbotron"
-            className="content"
-            componentClass="div"
+            fluid={false}
           >
             <Row
               bsClass="row"
@@ -678,6 +334,7 @@ ShallowWrapper {
                       null,
                     ]
                   }
+                  computerPlay={[Function]}
                   currentPlayer={
                     Object {
                       "name": "NAME",
@@ -705,6 +362,461 @@ ShallowWrapper {
                 />
               </Col>
             </Row>
+          </Grid>,
+          "className": "content",
+          "componentClass": "div",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "bsClass": "container",
+            "children": <Row
+              bsClass="row"
+              componentClass="div"
+            >
+              <Col
+                bsClass="col"
+                componentClass="div"
+                md={4}
+                xs={12}
+              >
+                <PiePanel
+                  history={
+                    Array [
+                      Object {
+                        "id": 1,
+                        "winner": Object {
+                          "name": "NAME",
+                        },
+                      },
+                    ]
+                  }
+                  player={
+                    Object {
+                      "name": "NAME",
+                    }
+                  }
+                />
+              </Col>
+              <Col
+                bsClass="col"
+                componentClass="div"
+                md={4}
+                xs={12}
+              >
+                <Unknown
+                  board={
+                    Array [
+                      "x",
+                      "o",
+                      "x",
+                      null,
+                      null,
+                      "x",
+                      "o",
+                      null,
+                      null,
+                    ]
+                  }
+                  computerPlay={[Function]}
+                  currentPlayer={
+                    Object {
+                      "name": "NAME",
+                    }
+                  }
+                />
+              </Col>
+              <Col
+                bsClass="col"
+                componentClass="div"
+                md={4}
+                xs={12}
+              >
+                <Unknown
+                  history={
+                    Array [
+                      Object {
+                        "id": 1,
+                        "winner": Object {
+                          "name": "NAME",
+                        },
+                      },
+                    ]
+                  }
+                />
+              </Col>
+            </Row>,
+            "componentClass": "div",
+            "fluid": false,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "bsClass": "row",
+              "children": Array [
+                <Col
+                  bsClass="col"
+                  componentClass="div"
+                  md={4}
+                  xs={12}
+                >
+                  <PiePanel
+                    history={
+                      Array [
+                        Object {
+                          "id": 1,
+                          "winner": Object {
+                            "name": "NAME",
+                          },
+                        },
+                      ]
+                    }
+                    player={
+                      Object {
+                        "name": "NAME",
+                      }
+                    }
+                  />
+                </Col>,
+                <Col
+                  bsClass="col"
+                  componentClass="div"
+                  md={4}
+                  xs={12}
+                >
+                  <Unknown
+                    board={
+                      Array [
+                        "x",
+                        "o",
+                        "x",
+                        null,
+                        null,
+                        "x",
+                        "o",
+                        null,
+                        null,
+                      ]
+                    }
+                    computerPlay={[Function]}
+                    currentPlayer={
+                      Object {
+                        "name": "NAME",
+                      }
+                    }
+                  />
+                </Col>,
+                <Col
+                  bsClass="col"
+                  componentClass="div"
+                  md={4}
+                  xs={12}
+                >
+                  <Unknown
+                    history={
+                      Array [
+                        Object {
+                          "id": 1,
+                          "winner": Object {
+                            "name": "NAME",
+                          },
+                        },
+                      ]
+                    }
+                  />
+                </Col>,
+              ],
+              "componentClass": "div",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "bsClass": "col",
+                  "children": <PiePanel
+                    history={
+                      Array [
+                        Object {
+                          "id": 1,
+                          "winner": Object {
+                            "name": "NAME",
+                          },
+                        },
+                      ]
+                    }
+                    player={
+                      Object {
+                        "name": "NAME",
+                      }
+                    }
+                  />,
+                  "componentClass": "div",
+                  "md": 4,
+                  "xs": 12,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "history": Array [
+                      Object {
+                        "id": 1,
+                        "winner": Object {
+                          "name": "NAME",
+                        },
+                      },
+                    ],
+                    "player": Object {
+                      "name": "NAME",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "bsClass": "col",
+                  "children": <Unknown
+                    board={
+                      Array [
+                        "x",
+                        "o",
+                        "x",
+                        null,
+                        null,
+                        "x",
+                        "o",
+                        null,
+                        null,
+                      ]
+                    }
+                    computerPlay={[Function]}
+                    currentPlayer={
+                      Object {
+                        "name": "NAME",
+                      }
+                    }
+                  />,
+                  "componentClass": "div",
+                  "md": 4,
+                  "xs": 12,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "board": Array [
+                      "x",
+                      "o",
+                      "x",
+                      null,
+                      null,
+                      "x",
+                      "o",
+                      null,
+                      null,
+                    ],
+                    "computerPlay": [Function],
+                    "currentPlayer": Object {
+                      "name": "NAME",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "bsClass": "col",
+                  "children": <Unknown
+                    history={
+                      Array [
+                        Object {
+                          "id": 1,
+                          "winner": Object {
+                            "name": "NAME",
+                          },
+                        },
+                      ]
+                    }
+                  />,
+                  "componentClass": "div",
+                  "md": 4,
+                  "xs": 12,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "history": Array [
+                      Object {
+                        "id": 1,
+                        "winner": Object {
+                          "name": "NAME",
+                        },
+                      },
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "bsClass": "container",
+        "children": Array [
+          <Unknown
+            player={
+              Object {
+                "name": "NAME",
+              }
+            }
+          >
+            <Unknown>
+              <Unknown
+                type="trophy"
+              />
+              <Unknown
+                name="TicTacToe"
+              />
+            </Unknown>
+            <Unknown>
+              <StartButton
+                status="GAME_OVER"
+              >
+                Start The Game
+              </StartButton>
+            </Unknown>
+          </Unknown>,
+          <Jumbotron
+            bsClass="jumbotron"
+            className="content"
+            componentClass="div"
+          >
+            <Grid
+              bsClass="container"
+              componentClass="div"
+              fluid={false}
+            >
+              <Row
+                bsClass="row"
+                componentClass="div"
+              >
+                <Col
+                  bsClass="col"
+                  componentClass="div"
+                  md={4}
+                  xs={12}
+                >
+                  <PiePanel
+                    history={
+                      Array [
+                        Object {
+                          "id": 1,
+                          "winner": Object {
+                            "name": "NAME",
+                          },
+                        },
+                      ]
+                    }
+                    player={
+                      Object {
+                        "name": "NAME",
+                      }
+                    }
+                  />
+                </Col>
+                <Col
+                  bsClass="col"
+                  componentClass="div"
+                  md={4}
+                  xs={12}
+                >
+                  <Unknown
+                    board={
+                      Array [
+                        "x",
+                        "o",
+                        "x",
+                        null,
+                        null,
+                        "x",
+                        "o",
+                        null,
+                        null,
+                      ]
+                    }
+                    computerPlay={[Function]}
+                    currentPlayer={
+                      Object {
+                        "name": "NAME",
+                      }
+                    }
+                  />
+                </Col>
+                <Col
+                  bsClass="col"
+                  componentClass="div"
+                  md={4}
+                  xs={12}
+                >
+                  <Unknown
+                    history={
+                      Array [
+                        Object {
+                          "id": 1,
+                          "winner": Object {
+                            "name": "NAME",
+                          },
+                        },
+                      ]
+                    }
+                  />
+                </Col>
+              </Row>
+            </Grid>
           </Jumbotron>,
         ],
         "componentClass": "div",
@@ -816,92 +928,15 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "bsClass": "jumbotron",
-            "children": <Row
-              bsClass="row"
+            "children": <Grid
+              bsClass="container"
               componentClass="div"
+              fluid={false}
             >
-              <Col
-                bsClass="col"
+              <Row
+                bsClass="row"
                 componentClass="div"
-                md={4}
-                xs={12}
               >
-                <PiePanel
-                  history={
-                    Array [
-                      Object {
-                        "id": 1,
-                        "winner": Object {
-                          "name": "NAME",
-                        },
-                      },
-                    ]
-                  }
-                  player={
-                    Object {
-                      "name": "NAME",
-                    }
-                  }
-                />
-              </Col>
-              <Col
-                bsClass="col"
-                componentClass="div"
-                md={4}
-                xs={12}
-              >
-                <Unknown
-                  board={
-                    Array [
-                      "x",
-                      "o",
-                      "x",
-                      null,
-                      null,
-                      "x",
-                      "o",
-                      null,
-                      null,
-                    ]
-                  }
-                  currentPlayer={
-                    Object {
-                      "name": "NAME",
-                    }
-                  }
-                />
-              </Col>
-              <Col
-                bsClass="col"
-                componentClass="div"
-                md={4}
-                xs={12}
-              >
-                <Unknown
-                  history={
-                    Array [
-                      Object {
-                        "id": 1,
-                        "winner": Object {
-                          "name": "NAME",
-                        },
-                      },
-                    ]
-                  }
-                />
-              </Col>
-            </Row>,
-            "className": "content",
-            "componentClass": "div",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "bsClass": "row",
-              "children": Array [
                 <Col
                   bsClass="col"
                   componentClass="div"
@@ -925,7 +960,7 @@ ShallowWrapper {
                       }
                     }
                   />
-                </Col>,
+                </Col>
                 <Col
                   bsClass="col"
                   componentClass="div"
@@ -946,13 +981,14 @@ ShallowWrapper {
                         null,
                       ]
                     }
+                    computerPlay={[Function]}
                     currentPlayer={
                       Object {
                         "name": "NAME",
                       }
                     }
                   />
-                </Col>,
+                </Col>
                 <Col
                   bsClass="col"
                   componentClass="div"
@@ -971,19 +1007,30 @@ ShallowWrapper {
                       ]
                     }
                   />
-                </Col>,
-              ],
-              "componentClass": "div",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "bsClass": "col",
-                  "children": <PiePanel
+                </Col>
+              </Row>
+            </Grid>,
+            "className": "content",
+            "componentClass": "div",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "bsClass": "container",
+              "children": <Row
+                bsClass="row"
+                componentClass="div"
+              >
+                <Col
+                  bsClass="col"
+                  componentClass="div"
+                  md={4}
+                  xs={12}
+                >
+                  <PiePanel
                     history={
                       Array [
                         Object {
@@ -999,42 +1046,15 @@ ShallowWrapper {
                         "name": "NAME",
                       }
                     }
-                  />,
-                  "componentClass": "div",
-                  "md": 4,
-                  "xs": 12,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "history": Array [
-                      Object {
-                        "id": 1,
-                        "winner": Object {
-                          "name": "NAME",
-                        },
-                      },
-                    ],
-                    "player": Object {
-                      "name": "NAME",
-                    },
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "bsClass": "col",
-                  "children": <Unknown
+                  />
+                </Col>
+                <Col
+                  bsClass="col"
+                  componentClass="div"
+                  md={4}
+                  xs={12}
+                >
+                  <Unknown
                     board={
                       Array [
                         "x",
@@ -1048,50 +1068,21 @@ ShallowWrapper {
                         null,
                       ]
                     }
+                    computerPlay={[Function]}
                     currentPlayer={
                       Object {
                         "name": "NAME",
                       }
                     }
-                  />,
-                  "componentClass": "div",
-                  "md": 4,
-                  "xs": 12,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "board": Array [
-                      "x",
-                      "o",
-                      "x",
-                      null,
-                      null,
-                      "x",
-                      "o",
-                      null,
-                      null,
-                    ],
-                    "currentPlayer": Object {
-                      "name": "NAME",
-                    },
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "bsClass": "col",
-                  "children": <Unknown
+                  />
+                </Col>
+                <Col
+                  bsClass="col"
+                  componentClass="div"
+                  md={4}
+                  xs={12}
+                >
+                  <Unknown
                     history={
                       Array [
                         Object {
@@ -1102,33 +1093,252 @@ ShallowWrapper {
                         },
                       ]
                     }
-                  />,
-                  "componentClass": "div",
-                  "md": 4,
-                  "xs": 12,
-                },
-                "ref": null,
-                "rendered": Object {
+                  />
+                </Col>
+              </Row>,
+              "componentClass": "div",
+              "fluid": false,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "bsClass": "row",
+                "children": Array [
+                  <Col
+                    bsClass="col"
+                    componentClass="div"
+                    md={4}
+                    xs={12}
+                  >
+                    <PiePanel
+                      history={
+                        Array [
+                          Object {
+                            "id": 1,
+                            "winner": Object {
+                              "name": "NAME",
+                            },
+                          },
+                        ]
+                      }
+                      player={
+                        Object {
+                          "name": "NAME",
+                        }
+                      }
+                    />
+                  </Col>,
+                  <Col
+                    bsClass="col"
+                    componentClass="div"
+                    md={4}
+                    xs={12}
+                  >
+                    <Unknown
+                      board={
+                        Array [
+                          "x",
+                          "o",
+                          "x",
+                          null,
+                          null,
+                          "x",
+                          "o",
+                          null,
+                          null,
+                        ]
+                      }
+                      computerPlay={[Function]}
+                      currentPlayer={
+                        Object {
+                          "name": "NAME",
+                        }
+                      }
+                    />
+                  </Col>,
+                  <Col
+                    bsClass="col"
+                    componentClass="div"
+                    md={4}
+                    xs={12}
+                  >
+                    <Unknown
+                      history={
+                        Array [
+                          Object {
+                            "id": 1,
+                            "winner": Object {
+                              "name": "NAME",
+                            },
+                          },
+                        ]
+                      }
+                    />
+                  </Col>,
+                ],
+                "componentClass": "div",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
+                  "nodeType": "class",
                   "props": Object {
-                    "history": Array [
-                      Object {
-                        "id": 1,
-                        "winner": Object {
+                    "bsClass": "col",
+                    "children": <PiePanel
+                      history={
+                        Array [
+                          Object {
+                            "id": 1,
+                            "winner": Object {
+                              "name": "NAME",
+                            },
+                          },
+                        ]
+                      }
+                      player={
+                        Object {
                           "name": "NAME",
-                        },
-                      },
-                    ],
+                        }
+                      }
+                    />,
+                    "componentClass": "div",
+                    "md": 4,
+                    "xs": 12,
                   },
                   "ref": null,
-                  "rendered": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "history": Array [
+                        Object {
+                          "id": 1,
+                          "winner": Object {
+                            "name": "NAME",
+                          },
+                        },
+                      ],
+                      "player": Object {
+                        "name": "NAME",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
                   "type": [Function],
                 },
-                "type": [Function],
-              },
-            ],
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "bsClass": "col",
+                    "children": <Unknown
+                      board={
+                        Array [
+                          "x",
+                          "o",
+                          "x",
+                          null,
+                          null,
+                          "x",
+                          "o",
+                          null,
+                          null,
+                        ]
+                      }
+                      computerPlay={[Function]}
+                      currentPlayer={
+                        Object {
+                          "name": "NAME",
+                        }
+                      }
+                    />,
+                    "componentClass": "div",
+                    "md": 4,
+                    "xs": 12,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "board": Array [
+                        "x",
+                        "o",
+                        "x",
+                        null,
+                        null,
+                        "x",
+                        "o",
+                        null,
+                        null,
+                      ],
+                      "computerPlay": [Function],
+                      "currentPlayer": Object {
+                        "name": "NAME",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "bsClass": "col",
+                    "children": <Unknown
+                      history={
+                        Array [
+                          Object {
+                            "id": 1,
+                            "winner": Object {
+                              "name": "NAME",
+                            },
+                          },
+                        ]
+                      }
+                    />,
+                    "componentClass": "div",
+                    "md": 4,
+                    "xs": 12,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "history": Array [
+                        Object {
+                          "id": 1,
+                          "winner": Object {
+                            "name": "NAME",
+                          },
+                        },
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
             "type": [Function],
           },
           "type": [Function],

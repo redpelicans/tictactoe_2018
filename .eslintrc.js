@@ -19,6 +19,7 @@ module.exports = {
     },
   },
   rules: {
+    'no-new-func': 'off',
     'no-return-assign': 'off',
     'consistent-return': 'off',
     'global-require': 'off',
