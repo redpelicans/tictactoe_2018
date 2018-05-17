@@ -10,6 +10,7 @@ const state = {
   status: 'GAME_OVER',
   player,
   board: [X, O, X, null, null, X, O, null, null],
+  history: [],
 };
 
 describe('App', () => {

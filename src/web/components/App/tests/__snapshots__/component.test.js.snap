@@ -23,6 +23,7 @@ ShallowWrapper {
         "name": "TOTO",
       }
     }
+    history={Array []}
     player={
       Object {
         "name": "TOTO",
@@ -79,7 +80,7 @@ ShallowWrapper {
             <Col
               bsClass="col"
               componentClass="div"
-              md={12}
+              md={6}
               xs={12}
             >
               <Unknown
@@ -101,6 +102,16 @@ ShallowWrapper {
                     "name": "TOTO",
                   }
                 }
+              />
+            </Col>
+            <Col
+              bsClass="col"
+              componentClass="div"
+              md={6}
+              xs={12}
+            >
+              <Unknown
+                history={Array []}
               />
             </Col>
           </Row>
@@ -222,7 +233,7 @@ ShallowWrapper {
             <Col
               bsClass="col"
               componentClass="div"
-              md={12}
+              md={6}
               xs={12}
             >
               <Unknown
@@ -246,6 +257,16 @@ ShallowWrapper {
                 }
               />
             </Col>
+            <Col
+              bsClass="col"
+              componentClass="div"
+              md={6}
+              xs={12}
+            >
+              <Unknown
+                history={Array []}
+              />
+            </Col>
           </Row>,
           "className": "content",
           "componentClass": "div",
@@ -257,93 +278,134 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "bsClass": "row",
-            "children": <Col
-              bsClass="col"
-              componentClass="div"
-              md={12}
-              xs={12}
-            >
-              <Unknown
-                board={
-                  Array [
-                    "x",
-                    "o",
-                    "x",
-                    null,
-                    null,
-                    "x",
-                    "o",
-                    null,
-                    null,
-                  ]
-                }
-                currentPlayer={
-                  Object {
-                    "name": "TOTO",
+            "children": Array [
+              <Col
+                bsClass="col"
+                componentClass="div"
+                md={6}
+                xs={12}
+              >
+                <Unknown
+                  board={
+                    Array [
+                      "x",
+                      "o",
+                      "x",
+                      null,
+                      null,
+                      "x",
+                      "o",
+                      null,
+                      null,
+                    ]
                   }
-                }
-              />
-            </Col>,
+                  currentPlayer={
+                    Object {
+                      "name": "TOTO",
+                    }
+                  }
+                />
+              </Col>,
+              <Col
+                bsClass="col"
+                componentClass="div"
+                md={6}
+                xs={12}
+              >
+                <Unknown
+                  history={Array []}
+                />
+              </Col>,
+            ],
             "componentClass": "div",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "bsClass": "col",
-              "children": <Unknown
-                board={
-                  Array [
-                    "x",
-                    "o",
-                    "x",
-                    null,
-                    null,
-                    "x",
-                    "o",
-                    null,
-                    null,
-                  ]
-                }
-                currentPlayer={
-                  Object {
-                    "name": "TOTO",
-                  }
-                }
-              />,
-              "componentClass": "div",
-              "md": 12,
-              "xs": 12,
-            },
-            "ref": null,
-            "rendered": Object {
+          "rendered": Array [
+            Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "class",
               "props": Object {
-                "board": Array [
-                  "x",
-                  "o",
-                  "x",
-                  null,
-                  null,
-                  "x",
-                  "o",
-                  null,
-                  null,
-                ],
-                "currentPlayer": Object {
-                  "name": "TOTO",
-                },
+                "bsClass": "col",
+                "children": <Unknown
+                  board={
+                    Array [
+                      "x",
+                      "o",
+                      "x",
+                      null,
+                      null,
+                      "x",
+                      "o",
+                      null,
+                      null,
+                    ]
+                  }
+                  currentPlayer={
+                    Object {
+                      "name": "TOTO",
+                    }
+                  }
+                />,
+                "componentClass": "div",
+                "md": 6,
+                "xs": 12,
               },
               "ref": null,
-              "rendered": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "board": Array [
+                    "x",
+                    "o",
+                    "x",
+                    null,
+                    null,
+                    "x",
+                    "o",
+                    null,
+                    null,
+                  ],
+                  "currentPlayer": Object {
+                    "name": "TOTO",
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
               "type": [Function],
             },
-            "type": [Function],
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "bsClass": "col",
+                "children": <Unknown
+                  history={Array []}
+                />,
+                "componentClass": "div",
+                "md": 6,
+                "xs": 12,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "history": Array [],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
         "type": [Function],
@@ -394,7 +456,7 @@ ShallowWrapper {
               <Col
                 bsClass="col"
                 componentClass="div"
-                md={12}
+                md={6}
                 xs={12}
               >
                 <Unknown
@@ -416,6 +478,16 @@ ShallowWrapper {
                       "name": "TOTO",
                     }
                   }
+                />
+              </Col>
+              <Col
+                bsClass="col"
+                componentClass="div"
+                md={6}
+                xs={12}
+              >
+                <Unknown
+                  history={Array []}
                 />
               </Col>
             </Row>
@@ -537,7 +609,7 @@ ShallowWrapper {
               <Col
                 bsClass="col"
                 componentClass="div"
-                md={12}
+                md={6}
                 xs={12}
               >
                 <Unknown
@@ -561,6 +633,16 @@ ShallowWrapper {
                   }
                 />
               </Col>
+              <Col
+                bsClass="col"
+                componentClass="div"
+                md={6}
+                xs={12}
+              >
+                <Unknown
+                  history={Array []}
+                />
+              </Col>
             </Row>,
             "className": "content",
             "componentClass": "div",
@@ -572,93 +654,134 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "bsClass": "row",
-              "children": <Col
-                bsClass="col"
-                componentClass="div"
-                md={12}
-                xs={12}
-              >
-                <Unknown
-                  board={
-                    Array [
-                      "x",
-                      "o",
-                      "x",
-                      null,
-                      null,
-                      "x",
-                      "o",
-                      null,
-                      null,
-                    ]
-                  }
-                  currentPlayer={
-                    Object {
-                      "name": "TOTO",
+              "children": Array [
+                <Col
+                  bsClass="col"
+                  componentClass="div"
+                  md={6}
+                  xs={12}
+                >
+                  <Unknown
+                    board={
+                      Array [
+                        "x",
+                        "o",
+                        "x",
+                        null,
+                        null,
+                        "x",
+                        "o",
+                        null,
+                        null,
+                      ]
                     }
-                  }
-                />
-              </Col>,
+                    currentPlayer={
+                      Object {
+                        "name": "TOTO",
+                      }
+                    }
+                  />
+                </Col>,
+                <Col
+                  bsClass="col"
+                  componentClass="div"
+                  md={6}
+                  xs={12}
+                >
+                  <Unknown
+                    history={Array []}
+                  />
+                </Col>,
+              ],
               "componentClass": "div",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "bsClass": "col",
-                "children": <Unknown
-                  board={
-                    Array [
-                      "x",
-                      "o",
-                      "x",
-                      null,
-                      null,
-                      "x",
-                      "o",
-                      null,
-                      null,
-                    ]
-                  }
-                  currentPlayer={
-                    Object {
-                      "name": "TOTO",
-                    }
-                  }
-                />,
-                "componentClass": "div",
-                "md": 12,
-                "xs": 12,
-              },
-              "ref": null,
-              "rendered": Object {
+            "rendered": Array [
+              Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "function",
+                "nodeType": "class",
                 "props": Object {
-                  "board": Array [
-                    "x",
-                    "o",
-                    "x",
-                    null,
-                    null,
-                    "x",
-                    "o",
-                    null,
-                    null,
-                  ],
-                  "currentPlayer": Object {
-                    "name": "TOTO",
-                  },
+                  "bsClass": "col",
+                  "children": <Unknown
+                    board={
+                      Array [
+                        "x",
+                        "o",
+                        "x",
+                        null,
+                        null,
+                        "x",
+                        "o",
+                        null,
+                        null,
+                      ]
+                    }
+                    currentPlayer={
+                      Object {
+                        "name": "TOTO",
+                      }
+                    }
+                  />,
+                  "componentClass": "div",
+                  "md": 6,
+                  "xs": 12,
                 },
                 "ref": null,
-                "rendered": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "board": Array [
+                      "x",
+                      "o",
+                      "x",
+                      null,
+                      null,
+                      "x",
+                      "o",
+                      null,
+                      null,
+                    ],
+                    "currentPlayer": Object {
+                      "name": "TOTO",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
                 "type": [Function],
               },
-              "type": [Function],
-            },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "bsClass": "col",
+                  "children": <Unknown
+                    history={Array []}
+                  />,
+                  "componentClass": "div",
+                  "md": 6,
+                  "xs": 12,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "history": Array [],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
             "type": [Function],
           },
           "type": [Function],
