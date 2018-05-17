@@ -3,11 +3,18 @@ import PropTypes from 'prop-types';
 import { Grid, Row, Col } from 'react-bootstrap';
 import './board.css';
 
-const Message = () => (
-  <Col xs={12} className="message">
-    <span>a message</span>
-  </Col>
-);
+const Message = ({ currentPlayer }) => {
+  const message = currentPlayer ? `${currentPlayer.name}'s turn` : 'A message';
+  return (
+    <Col xs={12} className="message">
+      <span>{message}</span>
+    </Col>
+  );
+};
+
+Message.propTypes = {
+  currentPlayer: PropTypes.object,
+};
 
 const Cell = ({ piece }) => (
   <Col xs={4} className="cell">
@@ -31,10 +38,10 @@ Board.propTypes = {
   board: PropTypes.array.isRequired,
 };
 
-export const BoardPanel = ({ board }) => (
+export const BoardPanel = ({ board, currentPlayer }) => (
   <Grid className="panel">
     <Row>
-      <Message />
+      <Message currentPlayer={currentPlayer} />
     </Row>
     <Row>
       <Board board={board} />
@@ -44,4 +51,5 @@ export const BoardPanel = ({ board }) => (
 
 BoardPanel.propTypes = {
   board: PropTypes.array.isRequired,
+  currentPlayer: PropTypes.object,
 };

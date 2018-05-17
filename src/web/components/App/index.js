@@ -39,7 +39,7 @@ const App = ({ board, player, currentPlayer, status }) => (
     </Header>
     <Jumbotron className="content">
       <Row>
-        <Col md={6} xs={12}>
+        <Col md={12} xs={12}>
           <BoardPanel board={board} currentPlayer={currentPlayer} />
         </Col>
       </Row>
