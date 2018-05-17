@@ -36,7 +36,7 @@ ShallowWrapper {
           bsClass="row"
           componentClass="div"
         >
-          <Message
+          <Unknown
             currentPlayer={
               Object {
                 "name": "Toto",
@@ -48,7 +48,7 @@ ShallowWrapper {
           bsClass="row"
           componentClass="div"
         >
-          <Board
+          <Unknown
             board={
               Array [
                 "x",
@@ -71,7 +71,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "bsClass": "row",
-          "children": <Message
+          "children": <Unknown
             currentPlayer={
               Object {
                 "name": "Toto",
@@ -102,7 +102,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "bsClass": "row",
-          "children": <Board
+          "children": <Unknown
             board={
               Array [
                 "x",
@@ -146,7 +146,7 @@ ShallowWrapper {
             bsClass="row"
             componentClass="div"
           >
-            <Message
+            <Unknown
               currentPlayer={
                 Object {
                   "name": "Toto",
@@ -158,7 +158,7 @@ ShallowWrapper {
             bsClass="row"
             componentClass="div"
           >
-            <Board
+            <Unknown
               board={
                 Array [
                   "x",
@@ -181,7 +181,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "bsClass": "row",
-            "children": <Message
+            "children": <Unknown
               currentPlayer={
                 Object {
                   "name": "Toto",
@@ -212,7 +212,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "bsClass": "row",
-            "children": <Board
+            "children": <Unknown
               board={
                 Array [
                   "x",

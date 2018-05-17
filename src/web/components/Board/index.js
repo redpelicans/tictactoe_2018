@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Grid, Row, Col } from 'react-bootstrap';
 import './board.css';
 
-const Message = ({ currentPlayer }) => {
+export const Message = ({ currentPlayer }) => {
   const message = currentPlayer ? `${currentPlayer.name}'s turn` : 'A message';
   return (
     <Col xs={12} className="message">
@@ -16,7 +16,7 @@ Message.propTypes = {
   currentPlayer: PropTypes.object,
 };
 
-const Cell = ({ piece }) => (
+export const Cell = ({ piece }) => (
   <Col xs={4} className="cell">
     {piece || '\u00a0'}
   </Col>
@@ -25,7 +25,7 @@ Cell.propTypes = {
   piece: PropTypes.string,
 };
 
-const Board = ({ board }) => (
+export const Board = ({ board }) => (
   <Grid className="board">
     <Row>
       {/* eslint-disable react/no-array-index-key */}
