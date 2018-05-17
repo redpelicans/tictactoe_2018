@@ -80,7 +80,22 @@ ShallowWrapper {
             <Col
               bsClass="col"
               componentClass="div"
-              md={6}
+              md={4}
+              xs={12}
+            >
+              <PiePanel
+                history={Array []}
+                player={
+                  Object {
+                    "name": "TOTO",
+                  }
+                }
+              />
+            </Col>
+            <Col
+              bsClass="col"
+              componentClass="div"
+              md={4}
               xs={12}
             >
               <Unknown
@@ -107,7 +122,7 @@ ShallowWrapper {
             <Col
               bsClass="col"
               componentClass="div"
-              md={6}
+              md={4}
               xs={12}
             >
               <Unknown
@@ -233,7 +248,22 @@ ShallowWrapper {
             <Col
               bsClass="col"
               componentClass="div"
-              md={6}
+              md={4}
+              xs={12}
+            >
+              <PiePanel
+                history={Array []}
+                player={
+                  Object {
+                    "name": "TOTO",
+                  }
+                }
+              />
+            </Col>
+            <Col
+              bsClass="col"
+              componentClass="div"
+              md={4}
               xs={12}
             >
               <Unknown
@@ -260,7 +290,7 @@ ShallowWrapper {
             <Col
               bsClass="col"
               componentClass="div"
-              md={6}
+              md={4}
               xs={12}
             >
               <Unknown
@@ -282,7 +312,22 @@ ShallowWrapper {
               <Col
                 bsClass="col"
                 componentClass="div"
-                md={6}
+                md={4}
+                xs={12}
+              >
+                <PiePanel
+                  history={Array []}
+                  player={
+                    Object {
+                      "name": "TOTO",
+                    }
+                  }
+                />
+              </Col>,
+              <Col
+                bsClass="col"
+                componentClass="div"
+                md={4}
                 xs={12}
               >
                 <Unknown
@@ -309,7 +354,7 @@ ShallowWrapper {
               <Col
                 bsClass="col"
                 componentClass="div"
-                md={6}
+                md={4}
                 xs={12}
               >
                 <Unknown
@@ -321,6 +366,41 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "bsClass": "col",
+                "children": <PiePanel
+                  history={Array []}
+                  player={
+                    Object {
+                      "name": "TOTO",
+                    }
+                  }
+                />,
+                "componentClass": "div",
+                "md": 4,
+                "xs": 12,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "history": Array [],
+                  "player": Object {
+                    "name": "TOTO",
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
             Object {
               "instance": null,
               "key": undefined,
@@ -348,7 +428,7 @@ ShallowWrapper {
                   }
                 />,
                 "componentClass": "div",
-                "md": 6,
+                "md": 4,
                 "xs": 12,
               },
               "ref": null,
@@ -388,7 +468,7 @@ ShallowWrapper {
                   history={Array []}
                 />,
                 "componentClass": "div",
-                "md": 6,
+                "md": 4,
                 "xs": 12,
               },
               "ref": null,
@@ -456,7 +536,22 @@ ShallowWrapper {
               <Col
                 bsClass="col"
                 componentClass="div"
-                md={6}
+                md={4}
+                xs={12}
+              >
+                <PiePanel
+                  history={Array []}
+                  player={
+                    Object {
+                      "name": "TOTO",
+                    }
+                  }
+                />
+              </Col>
+              <Col
+                bsClass="col"
+                componentClass="div"
+                md={4}
                 xs={12}
               >
                 <Unknown
@@ -483,7 +578,7 @@ ShallowWrapper {
               <Col
                 bsClass="col"
                 componentClass="div"
-                md={6}
+                md={4}
                 xs={12}
               >
                 <Unknown
@@ -609,7 +704,22 @@ ShallowWrapper {
               <Col
                 bsClass="col"
                 componentClass="div"
-                md={6}
+                md={4}
+                xs={12}
+              >
+                <PiePanel
+                  history={Array []}
+                  player={
+                    Object {
+                      "name": "TOTO",
+                    }
+                  }
+                />
+              </Col>
+              <Col
+                bsClass="col"
+                componentClass="div"
+                md={4}
                 xs={12}
               >
                 <Unknown
@@ -636,7 +746,7 @@ ShallowWrapper {
               <Col
                 bsClass="col"
                 componentClass="div"
-                md={6}
+                md={4}
                 xs={12}
               >
                 <Unknown
@@ -658,7 +768,22 @@ ShallowWrapper {
                 <Col
                   bsClass="col"
                   componentClass="div"
-                  md={6}
+                  md={4}
+                  xs={12}
+                >
+                  <PiePanel
+                    history={Array []}
+                    player={
+                      Object {
+                        "name": "TOTO",
+                      }
+                    }
+                  />
+                </Col>,
+                <Col
+                  bsClass="col"
+                  componentClass="div"
+                  md={4}
                   xs={12}
                 >
                   <Unknown
@@ -685,7 +810,7 @@ ShallowWrapper {
                 <Col
                   bsClass="col"
                   componentClass="div"
-                  md={6}
+                  md={4}
                   xs={12}
                 >
                   <Unknown
@@ -697,6 +822,41 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "bsClass": "col",
+                  "children": <PiePanel
+                    history={Array []}
+                    player={
+                      Object {
+                        "name": "TOTO",
+                      }
+                    }
+                  />,
+                  "componentClass": "div",
+                  "md": 4,
+                  "xs": 12,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "history": Array [],
+                    "player": Object {
+                      "name": "TOTO",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
               Object {
                 "instance": null,
                 "key": undefined,
@@ -724,7 +884,7 @@ ShallowWrapper {
                     }
                   />,
                   "componentClass": "div",
-                  "md": 6,
+                  "md": 4,
                   "xs": 12,
                 },
                 "ref": null,
@@ -764,7 +924,7 @@ ShallowWrapper {
                     history={Array []}
                   />,
                   "componentClass": "div",
-                  "md": 6,
+                  "md": 4,
                   "xs": 12,
                 },
                 "ref": null,
