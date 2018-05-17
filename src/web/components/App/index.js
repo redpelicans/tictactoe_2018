@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Jumbotron, Row, Col, Button } from 'react-bootstrap';
 import { BoardPanel } from '../Board';
+import { HistoryPanel } from '../History';
 import { Header, HeaderLeft, HeaderRight } from '../Header';
 import { Icon, Title } from '../Widgets';
 import { isStatusOver } from '../../game';
@@ -26,7 +27,7 @@ StartButton.propTypes = {
   children: PropTypes.string.isRequired,
 };
 
-const App = ({ board, player, currentPlayer, status }) => (
+const App = ({ history, board, player, currentPlayer, status }) => (
   <Grid>
     <Header player={player}>
       <HeaderLeft>
@@ -42,6 +43,9 @@ const App = ({ board, player, currentPlayer, status }) => (
         <Col md={12} xs={12}>
           <BoardPanel board={board} currentPlayer={currentPlayer} />
         </Col>
+        <Col md={6} xs={12}>
+          <HistoryPanel history={history} />
+        </Col>
       </Row>
     </Jumbotron>
   </Grid>
@@ -52,6 +56,7 @@ App.propTypes = {
   player: PropTypes.object.isRequired,
   currentPlayer: PropTypes.object,
   status: PropTypes.string.isRequired,
+  history: PropTypes.array.isRequired,
 };
 
 export default App;
