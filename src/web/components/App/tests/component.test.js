@@ -2,15 +2,18 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Component from '..';
 
-const X = 'x';
-const O = 'o';
-const player = { name: 'TOTO' };
+const player = { name: 'NAME' };
+const computer = { name: 'computer', isComputer: true };
+const board = ['x', 'o', 'x', null, null, 'x', 'o', null, null];
+const history = [{ id: 1, winner: player }];
+
 const state = {
   currentPlayer: player,
   status: 'GAME_OVER',
   player,
-  board: [X, O, X, null, null, X, O, null, null],
-  history: [],
+  computer,
+  board,
+  history,
 };
 
 describe('App', () => {

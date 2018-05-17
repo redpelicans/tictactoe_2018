@@ -18,15 +18,30 @@ ShallowWrapper {
         null,
       ]
     }
-    currentPlayer={
+    computer={
       Object {
-        "name": "TOTO",
+        "isComputer": true,
+        "name": "computer",
       }
     }
-    history={Array []}
+    currentPlayer={
+      Object {
+        "name": "NAME",
+      }
+    }
+    history={
+      Array [
+        Object {
+          "id": 1,
+          "winner": Object {
+            "name": "NAME",
+          },
+        },
+      ]
+    }
     player={
       Object {
-        "name": "TOTO",
+        "name": "NAME",
       }
     }
     status="GAME_OVER"
@@ -48,7 +63,7 @@ ShallowWrapper {
         <Unknown
           player={
             Object {
-              "name": "TOTO",
+              "name": "NAME",
             }
           }
         >
@@ -84,10 +99,19 @@ ShallowWrapper {
               xs={12}
             >
               <PiePanel
-                history={Array []}
+                history={
+                  Array [
+                    Object {
+                      "id": 1,
+                      "winner": Object {
+                        "name": "NAME",
+                      },
+                    },
+                  ]
+                }
                 player={
                   Object {
-                    "name": "TOTO",
+                    "name": "NAME",
                   }
                 }
               />
@@ -114,7 +138,7 @@ ShallowWrapper {
                 }
                 currentPlayer={
                   Object {
-                    "name": "TOTO",
+                    "name": "NAME",
                   }
                 }
               />
@@ -126,7 +150,16 @@ ShallowWrapper {
               xs={12}
             >
               <Unknown
-                history={Array []}
+                history={
+                  Array [
+                    Object {
+                      "id": 1,
+                      "winner": Object {
+                        "name": "NAME",
+                      },
+                    },
+                  ]
+                }
               />
             </Col>
           </Row>
@@ -160,7 +193,7 @@ ShallowWrapper {
             </Unknown>,
           ],
           "player": Object {
-            "name": "TOTO",
+            "name": "NAME",
           },
         },
         "ref": null,
@@ -252,10 +285,19 @@ ShallowWrapper {
               xs={12}
             >
               <PiePanel
-                history={Array []}
+                history={
+                  Array [
+                    Object {
+                      "id": 1,
+                      "winner": Object {
+                        "name": "NAME",
+                      },
+                    },
+                  ]
+                }
                 player={
                   Object {
-                    "name": "TOTO",
+                    "name": "NAME",
                   }
                 }
               />
@@ -282,7 +324,7 @@ ShallowWrapper {
                 }
                 currentPlayer={
                   Object {
-                    "name": "TOTO",
+                    "name": "NAME",
                   }
                 }
               />
@@ -294,7 +336,16 @@ ShallowWrapper {
               xs={12}
             >
               <Unknown
-                history={Array []}
+                history={
+                  Array [
+                    Object {
+                      "id": 1,
+                      "winner": Object {
+                        "name": "NAME",
+                      },
+                    },
+                  ]
+                }
               />
             </Col>
           </Row>,
@@ -316,10 +367,19 @@ ShallowWrapper {
                 xs={12}
               >
                 <PiePanel
-                  history={Array []}
+                  history={
+                    Array [
+                      Object {
+                        "id": 1,
+                        "winner": Object {
+                          "name": "NAME",
+                        },
+                      },
+                    ]
+                  }
                   player={
                     Object {
-                      "name": "TOTO",
+                      "name": "NAME",
                     }
                   }
                 />
@@ -346,7 +406,7 @@ ShallowWrapper {
                   }
                   currentPlayer={
                     Object {
-                      "name": "TOTO",
+                      "name": "NAME",
                     }
                   }
                 />
@@ -358,7 +418,16 @@ ShallowWrapper {
                 xs={12}
               >
                 <Unknown
-                  history={Array []}
+                  history={
+                    Array [
+                      Object {
+                        "id": 1,
+                        "winner": Object {
+                          "name": "NAME",
+                        },
+                      },
+                    ]
+                  }
                 />
               </Col>,
             ],
@@ -373,10 +442,19 @@ ShallowWrapper {
               "props": Object {
                 "bsClass": "col",
                 "children": <PiePanel
-                  history={Array []}
+                  history={
+                    Array [
+                      Object {
+                        "id": 1,
+                        "winner": Object {
+                          "name": "NAME",
+                        },
+                      },
+                    ]
+                  }
                   player={
                     Object {
-                      "name": "TOTO",
+                      "name": "NAME",
                     }
                   }
                 />,
@@ -390,9 +468,16 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "history": Array [],
+                  "history": Array [
+                    Object {
+                      "id": 1,
+                      "winner": Object {
+                        "name": "NAME",
+                      },
+                    },
+                  ],
                   "player": Object {
-                    "name": "TOTO",
+                    "name": "NAME",
                   },
                 },
                 "ref": null,
@@ -423,7 +508,7 @@ ShallowWrapper {
                   }
                   currentPlayer={
                     Object {
-                      "name": "TOTO",
+                      "name": "NAME",
                     }
                   }
                 />,
@@ -449,7 +534,7 @@ ShallowWrapper {
                     null,
                   ],
                   "currentPlayer": Object {
-                    "name": "TOTO",
+                    "name": "NAME",
                   },
                 },
                 "ref": null,
@@ -465,7 +550,16 @@ ShallowWrapper {
               "props": Object {
                 "bsClass": "col",
                 "children": <Unknown
-                  history={Array []}
+                  history={
+                    Array [
+                      Object {
+                        "id": 1,
+                        "winner": Object {
+                          "name": "NAME",
+                        },
+                      },
+                    ]
+                  }
                 />,
                 "componentClass": "div",
                 "md": 4,
@@ -477,7 +571,14 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "history": Array [],
+                  "history": Array [
+                    Object {
+                      "id": 1,
+                      "winner": Object {
+                        "name": "NAME",
+                      },
+                    },
+                  ],
                 },
                 "ref": null,
                 "rendered": null,
@@ -504,7 +605,7 @@ ShallowWrapper {
           <Unknown
             player={
               Object {
-                "name": "TOTO",
+                "name": "NAME",
               }
             }
           >
@@ -540,10 +641,19 @@ ShallowWrapper {
                 xs={12}
               >
                 <PiePanel
-                  history={Array []}
+                  history={
+                    Array [
+                      Object {
+                        "id": 1,
+                        "winner": Object {
+                          "name": "NAME",
+                        },
+                      },
+                    ]
+                  }
                   player={
                     Object {
-                      "name": "TOTO",
+                      "name": "NAME",
                     }
                   }
                 />
@@ -570,7 +680,7 @@ ShallowWrapper {
                   }
                   currentPlayer={
                     Object {
-                      "name": "TOTO",
+                      "name": "NAME",
                     }
                   }
                 />
@@ -582,7 +692,16 @@ ShallowWrapper {
                 xs={12}
               >
                 <Unknown
-                  history={Array []}
+                  history={
+                    Array [
+                      Object {
+                        "id": 1,
+                        "winner": Object {
+                          "name": "NAME",
+                        },
+                      },
+                    ]
+                  }
                 />
               </Col>
             </Row>
@@ -616,7 +735,7 @@ ShallowWrapper {
               </Unknown>,
             ],
             "player": Object {
-              "name": "TOTO",
+              "name": "NAME",
             },
           },
           "ref": null,
@@ -708,10 +827,19 @@ ShallowWrapper {
                 xs={12}
               >
                 <PiePanel
-                  history={Array []}
+                  history={
+                    Array [
+                      Object {
+                        "id": 1,
+                        "winner": Object {
+                          "name": "NAME",
+                        },
+                      },
+                    ]
+                  }
                   player={
                     Object {
-                      "name": "TOTO",
+                      "name": "NAME",
                     }
                   }
                 />
@@ -738,7 +866,7 @@ ShallowWrapper {
                   }
                   currentPlayer={
                     Object {
-                      "name": "TOTO",
+                      "name": "NAME",
                     }
                   }
                 />
@@ -750,7 +878,16 @@ ShallowWrapper {
                 xs={12}
               >
                 <Unknown
-                  history={Array []}
+                  history={
+                    Array [
+                      Object {
+                        "id": 1,
+                        "winner": Object {
+                          "name": "NAME",
+                        },
+                      },
+                    ]
+                  }
                 />
               </Col>
             </Row>,
@@ -772,10 +909,19 @@ ShallowWrapper {
                   xs={12}
                 >
                   <PiePanel
-                    history={Array []}
+                    history={
+                      Array [
+                        Object {
+                          "id": 1,
+                          "winner": Object {
+                            "name": "NAME",
+                          },
+                        },
+                      ]
+                    }
                     player={
                       Object {
-                        "name": "TOTO",
+                        "name": "NAME",
                       }
                     }
                   />
@@ -802,7 +948,7 @@ ShallowWrapper {
                     }
                     currentPlayer={
                       Object {
-                        "name": "TOTO",
+                        "name": "NAME",
                       }
                     }
                   />
@@ -814,7 +960,16 @@ ShallowWrapper {
                   xs={12}
                 >
                   <Unknown
-                    history={Array []}
+                    history={
+                      Array [
+                        Object {
+                          "id": 1,
+                          "winner": Object {
+                            "name": "NAME",
+                          },
+                        },
+                      ]
+                    }
                   />
                 </Col>,
               ],
@@ -829,10 +984,19 @@ ShallowWrapper {
                 "props": Object {
                   "bsClass": "col",
                   "children": <PiePanel
-                    history={Array []}
+                    history={
+                      Array [
+                        Object {
+                          "id": 1,
+                          "winner": Object {
+                            "name": "NAME",
+                          },
+                        },
+                      ]
+                    }
                     player={
                       Object {
-                        "name": "TOTO",
+                        "name": "NAME",
                       }
                     }
                   />,
@@ -846,9 +1010,16 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
-                    "history": Array [],
+                    "history": Array [
+                      Object {
+                        "id": 1,
+                        "winner": Object {
+                          "name": "NAME",
+                        },
+                      },
+                    ],
                     "player": Object {
-                      "name": "TOTO",
+                      "name": "NAME",
                     },
                   },
                   "ref": null,
@@ -879,7 +1050,7 @@ ShallowWrapper {
                     }
                     currentPlayer={
                       Object {
-                        "name": "TOTO",
+                        "name": "NAME",
                       }
                     }
                   />,
@@ -905,7 +1076,7 @@ ShallowWrapper {
                       null,
                     ],
                     "currentPlayer": Object {
-                      "name": "TOTO",
+                      "name": "NAME",
                     },
                   },
                   "ref": null,
@@ -921,7 +1092,16 @@ ShallowWrapper {
                 "props": Object {
                   "bsClass": "col",
                   "children": <Unknown
-                    history={Array []}
+                    history={
+                      Array [
+                        Object {
+                          "id": 1,
+                          "winner": Object {
+                            "name": "NAME",
+                          },
+                        },
+                      ]
+                    }
                   />,
                   "componentClass": "div",
                   "md": 4,
@@ -933,7 +1113,14 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-                    "history": Array [],
+                    "history": Array [
+                      Object {
+                        "id": 1,
+                        "winner": Object {
+                          "name": "NAME",
+                        },
+                      },
+                    ],
                   },
                   "ref": null,
                   "rendered": null,
