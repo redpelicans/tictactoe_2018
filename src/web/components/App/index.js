@@ -6,6 +6,7 @@ import { HistoryPanel } from '../History';
 import { Header, HeaderLeft, HeaderRight } from '../Header';
 import { Icon, Title } from '../Widgets';
 import { isStatusOver } from '../../game';
+import Chart from '../Chart';
 import './app.css';
 
 const StartButton = ({ status, children }) => {
@@ -40,10 +41,13 @@ const App = ({ history, board, player, currentPlayer, status }) => (
     </Header>
     <Jumbotron className="content">
       <Row>
-        <Col md={6} xs={12}>
+        <Col md={4} xs={12}>
+          <Chart history={history} />
+        </Col>
+        <Col md={4} xs={12}>
           <BoardPanel board={board} currentPlayer={currentPlayer} />
         </Col>
-        <Col md={6} xs={12}>
+        <Col md={4} xs={12}>
           <HistoryPanel history={history} />
         </Col>
       </Row>
