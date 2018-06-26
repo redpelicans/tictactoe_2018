@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Grid, Row, Col } from 'react-bootstrap';
-import { isBoardFull } from '../../game';
+import { isStatusOver } from '../../game';
 import './board.css';
 
 export const Message = ({ currentPlayer }) => {
@@ -26,7 +26,7 @@ Cell.propTypes = {
   piece: PropTypes.string,
 };
 
-export const Board = ({ board, computerPlay }) => (
+export const Board = ({ status, board, computerPlay }) => (
   <div>
     <Grid className="board">
       <Row>
@@ -34,7 +34,7 @@ export const Board = ({ board, computerPlay }) => (
         {board.map((piece, i) => <Cell key={i} piece={piece} />)}
       </Row>
       <Row>
-        <Button className="computerPlay" disabled={isBoardFull(board)} onClick={computerPlay}>
+        <Button className="computerPlay" disabled={isStatusOver(status)} onClick={computerPlay}>
           Computer Play
         </Button>
       </Row>
@@ -44,21 +44,23 @@ export const Board = ({ board, computerPlay }) => (
 
 Board.propTypes = {
   board: PropTypes.array.isRequired,
+  status: PropTypes.string.isRequired,
   computerPlay: PropTypes.func.isRequired,
 };
 
-export const BoardPanel = ({ board, currentPlayer, computerPlay }) => (
+export const BoardPanel = ({ status, board, currentPlayer, computerPlay }) => (
   <Grid className="panel">
     <Row>
       <Message currentPlayer={currentPlayer} />
     </Row>
     <Row>
-      <Board board={board} computerPlay={computerPlay} />
+      <Board status={status} board={board} computerPlay={computerPlay} />
     </Row>
   </Grid>
 );
 
 BoardPanel.propTypes = {
+  status: PropTypes.string.isRequired,
   board: PropTypes.array.isRequired,
   currentPlayer: PropTypes.object,
   computerPlay: PropTypes.func,
