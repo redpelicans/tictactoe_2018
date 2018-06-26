@@ -1,5 +1,5 @@
 import React from 'react';
-import { object, func, element } from 'prop-types';
+import { object, func, array } from 'prop-types';
 import LoginForm from '../LoginForm';
 
 const Auth = ({ user, onAuth, children }) => {
@@ -10,7 +10,7 @@ const Auth = ({ user, onAuth, children }) => {
 Auth.propTypes = {
   user: object,
   onAuth: func.isRequired,
-  children: element,
+  children: array,
 };
 
 export default Auth;
