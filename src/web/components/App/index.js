@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Jumbotron, Row, Col, Button } from 'react-bootstrap';
 import { BoardPanel } from '../Board';
+import Auth from '../Auth';
 import { PiePanel } from '../Pie';
 import { HistoryPanel } from '../History';
 import { Header, HeaderLeft, HeaderRight } from '../Header';
@@ -32,6 +33,7 @@ class App extends React.Component {
   state = {
     board: this.props.board,
     status: this.props.status,
+    user: undefined,
   };
 
   startGame = () => {
@@ -56,43 +58,47 @@ class App extends React.Component {
     }
   };
 
+  handleAuth = user => this.setState({ user });
+
   render() {
     const { player, currentPlayer, history } = this.props;
-    const { board, status } = this.state;
+    const { board, status, user } = this.state;
     return (
-      <Grid>
-        <Header player={player}>
-          <HeaderLeft>
-            <Icon type="trophy" />
-            <Title name="TicTacToe" />
-          </HeaderLeft>
-          <HeaderRight>
-            <StartButton status={status} onClick={this.startGame}>
-              Start The Game
-            </StartButton>
-          </HeaderRight>
-        </Header>
-        <Jumbotron className="content">
-          <Grid>
-            <Row>
-              <Col md={4} xs={12}>
-                <PiePanel history={history} player={player} />
-              </Col>
-              <Col md={4} xs={12}>
-                <BoardPanel
-                  status={status}
-                  computerPlay={this.computerPlay}
-                  board={board}
-                  currentPlayer={currentPlayer}
-                />
-              </Col>
-              <Col md={4} xs={12}>
-                <HistoryPanel history={history} />
-              </Col>
-            </Row>
-          </Grid>
-        </Jumbotron>
-      </Grid>
+      <Auth user={user} onAuth={this.handleAuth}>
+        <Grid>
+          <Header player={player}>
+            <HeaderLeft>
+              <Icon type="trophy" />
+              <Title name="TicTacToe" />
+            </HeaderLeft>
+            <HeaderRight>
+              <StartButton status={status} onClick={this.startGame}>
+                Start The Game
+              </StartButton>
+            </HeaderRight>
+          </Header>
+          <Jumbotron className="content">
+            <Grid>
+              <Row>
+                <Col md={4} xs={12}>
+                  <PiePanel history={history} player={player} />
+                </Col>
+                <Col md={4} xs={12}>
+                  <BoardPanel
+                    status={status}
+                    computerPlay={this.computerPlay}
+                    board={board}
+                    currentPlayer={currentPlayer}
+                  />
+                </Col>
+                <Col md={4} xs={12}>
+                  <HistoryPanel history={history} />
+                </Col>
+              </Row>
+            </Grid>
+          </Jumbotron>
+        </Grid>
+      </Auth>
     );
   }
 }
