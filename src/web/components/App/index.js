@@ -3,7 +3,7 @@ import App from './component';
 import withAuth from '../../hoc/auth';
 import { O, getStatus, GAME_RUNNING } from '../../game';
 
-const enhance = compose(
+export const enhance = compose(
   withState('user', 'setUser'),
   withStateHandlers(({ board, status }) => ({ board, status }), {
     onAuth: () => user => ({ user }),

@@ -1,6 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import Component from '..';
+import { shallow, mount } from 'enzyme';
+import Component from '../component';
 
 const player = { name: 'NAME' };
 const computer = { name: 'computer', isComputer: true };
@@ -16,9 +16,19 @@ const state = {
   history,
 };
 
+const onStart = jest.fn();
+const computerPlay = jest.fn();
+
 describe('App', () => {
   it('should render', () => {
-    const wrapper = shallow(<Component {...state} />);
+    const wrapper = shallow(<Component {...state} onStart={onStart} computerPlay={computerPlay} />);
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should start game', () => {
+    const wrapper = mount(<Component {...state} onStart={onStart} computerPlay={computerPlay} />);
+    const button = wrapper.find('button.start-game-button');
+    button.simulate('click');
+    expect(onStart).toHaveBeenCalled();
   });
 });

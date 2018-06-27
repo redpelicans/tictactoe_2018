@@ -24,6 +24,7 @@ ShallowWrapper {
         "name": "computer",
       }
     }
+    computerPlay={[MockFunction]}
     currentPlayer={
       Object {
         "name": "NAME",
@@ -39,6 +40,7 @@ ShallowWrapper {
         },
       ]
     }
+    onStart={[MockFunction]}
     player={
       Object {
         "name": "NAME",
@@ -77,6 +79,7 @@ ShallowWrapper {
           </Unknown>
           <Unknown>
             <StartButton
+              onClick={[MockFunction]}
               status="GAME_OVER"
             >
               Start The Game
@@ -141,12 +144,13 @@ ShallowWrapper {
                       null,
                     ]
                   }
-                  computerPlay={[Function]}
+                  computerPlay={[MockFunction]}
                   currentPlayer={
                     Object {
                       "name": "NAME",
                     }
                   }
+                  status="GAME_OVER"
                 />
               </Col>
               <Col
@@ -193,6 +197,7 @@ ShallowWrapper {
             </Unknown>,
             <Unknown>
               <StartButton
+                onClick={[MockFunction]}
                 status="GAME_OVER"
               >
                 Start The Game
@@ -252,6 +257,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": <StartButton
+                onClick={[MockFunction]}
                 status="GAME_OVER"
               >
                 Start The Game
@@ -264,6 +270,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": "Start The Game",
+                "onClick": [MockFunction],
                 "status": "GAME_OVER",
               },
               "ref": null,
@@ -334,12 +341,13 @@ ShallowWrapper {
                       null,
                     ]
                   }
-                  computerPlay={[Function]}
+                  computerPlay={[MockFunction]}
                   currentPlayer={
                     Object {
                       "name": "NAME",
                     }
                   }
+                  status="GAME_OVER"
                 />
               </Col>
               <Col
@@ -421,12 +429,13 @@ ShallowWrapper {
                       null,
                     ]
                   }
-                  computerPlay={[Function]}
+                  computerPlay={[MockFunction]}
                   currentPlayer={
                     Object {
                       "name": "NAME",
                     }
                   }
+                  status="GAME_OVER"
                 />
               </Col>
               <Col
@@ -504,12 +513,13 @@ ShallowWrapper {
                         null,
                       ]
                     }
-                    computerPlay={[Function]}
+                    computerPlay={[MockFunction]}
                     currentPlayer={
                       Object {
                         "name": "NAME",
                       }
                     }
+                    status="GAME_OVER"
                   />
                 </Col>,
                 <Col
@@ -607,12 +617,13 @@ ShallowWrapper {
                         null,
                       ]
                     }
-                    computerPlay={[Function]}
+                    computerPlay={[MockFunction]}
                     currentPlayer={
                       Object {
                         "name": "NAME",
                       }
                     }
+                    status="GAME_OVER"
                   />,
                   "componentClass": "div",
                   "md": 4,
@@ -635,10 +646,11 @@ ShallowWrapper {
                       null,
                       null,
                     ],
-                    "computerPlay": [Function],
+                    "computerPlay": [MockFunction],
                     "currentPlayer": Object {
                       "name": "NAME",
                     },
+                    "status": "GAME_OVER",
                   },
                   "ref": null,
                   "rendered": null,
@@ -724,6 +736,7 @@ ShallowWrapper {
             </Unknown>
             <Unknown>
               <StartButton
+                onClick={[MockFunction]}
                 status="GAME_OVER"
               >
                 Start The Game
@@ -788,12 +801,13 @@ ShallowWrapper {
                         null,
                       ]
                     }
-                    computerPlay={[Function]}
+                    computerPlay={[MockFunction]}
                     currentPlayer={
                       Object {
                         "name": "NAME",
                       }
                     }
+                    status="GAME_OVER"
                   />
                 </Col>
                 <Col
@@ -840,6 +854,7 @@ ShallowWrapper {
               </Unknown>,
               <Unknown>
                 <StartButton
+                  onClick={[MockFunction]}
                   status="GAME_OVER"
                 >
                   Start The Game
@@ -899,6 +914,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": <StartButton
+                  onClick={[MockFunction]}
                   status="GAME_OVER"
                 >
                   Start The Game
@@ -911,6 +927,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": "Start The Game",
+                  "onClick": [MockFunction],
                   "status": "GAME_OVER",
                 },
                 "ref": null,
@@ -981,12 +998,13 @@ ShallowWrapper {
                         null,
                       ]
                     }
-                    computerPlay={[Function]}
+                    computerPlay={[MockFunction]}
                     currentPlayer={
                       Object {
                         "name": "NAME",
                       }
                     }
+                    status="GAME_OVER"
                   />
                 </Col>
                 <Col
@@ -1068,12 +1086,13 @@ ShallowWrapper {
                         null,
                       ]
                     }
-                    computerPlay={[Function]}
+                    computerPlay={[MockFunction]}
                     currentPlayer={
                       Object {
                         "name": "NAME",
                       }
                     }
+                    status="GAME_OVER"
                   />
                 </Col>
                 <Col
@@ -1151,12 +1170,13 @@ ShallowWrapper {
                           null,
                         ]
                       }
-                      computerPlay={[Function]}
+                      computerPlay={[MockFunction]}
                       currentPlayer={
                         Object {
                           "name": "NAME",
                         }
                       }
+                      status="GAME_OVER"
                     />
                   </Col>,
                   <Col
@@ -1254,12 +1274,13 @@ ShallowWrapper {
                           null,
                         ]
                       }
-                      computerPlay={[Function]}
+                      computerPlay={[MockFunction]}
                       currentPlayer={
                         Object {
                           "name": "NAME",
                         }
                       }
+                      status="GAME_OVER"
                     />,
                     "componentClass": "div",
                     "md": 4,
@@ -1282,10 +1303,11 @@ ShallowWrapper {
                         null,
                         null,
                       ],
-                      "computerPlay": [Function],
+                      "computerPlay": [MockFunction],
                       "currentPlayer": Object {
                         "name": "NAME",
                       },
+                      "status": "GAME_OVER",
                     },
                     "ref": null,
                     "rendered": null,
