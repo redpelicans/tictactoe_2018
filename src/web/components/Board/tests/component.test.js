@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import { BoardPanel, Board, Cell, Message } from '../';
 
 const state = {
+  status: 'GAME_OVER',
   board: ['x', 'x', 'x'],
   currentPlayer: { name: 'Toto' },
   computerPlay: new Function(),
