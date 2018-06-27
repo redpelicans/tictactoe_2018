@@ -18,6 +18,7 @@ ShallowWrapper {
         "name": "Toto",
       }
     }
+    status="GAME_OVER"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -58,6 +59,7 @@ ShallowWrapper {
               ]
             }
             computerPlay={[Function]}
+            status="GAME_OVER"
           />
         </Row>,
       ],
@@ -113,6 +115,7 @@ ShallowWrapper {
               ]
             }
             computerPlay={[Function]}
+            status="GAME_OVER"
           />,
           "componentClass": "div",
         },
@@ -128,6 +131,7 @@ ShallowWrapper {
               "x",
             ],
             "computerPlay": [Function],
+            "status": "GAME_OVER",
           },
           "ref": null,
           "rendered": null,
@@ -171,6 +175,7 @@ ShallowWrapper {
                 ]
               }
               computerPlay={[Function]}
+              status="GAME_OVER"
             />
           </Row>,
         ],
@@ -226,6 +231,7 @@ ShallowWrapper {
                 ]
               }
               computerPlay={[Function]}
+              status="GAME_OVER"
             />,
             "componentClass": "div",
           },
@@ -241,6 +247,7 @@ ShallowWrapper {
                 "x",
               ],
               "computerPlay": [Function],
+              "status": "GAME_OVER",
             },
             "ref": null,
             "rendered": null,

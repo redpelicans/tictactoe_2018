@@ -13,7 +13,7 @@ const StartButton = ({ status, children, onClick }) => {
   if (isStatusOver(status)) {
     return (
       <div className="start-button">
-        <Button bsSize="lg" bsStyle="primary" onClick={onClick}>
+        <Button className="start-game-button" bsSize="lg" bsStyle="primary" onClick={onClick}>
           {children}
         </Button>
       </div>

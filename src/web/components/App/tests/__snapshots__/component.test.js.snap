@@ -77,6 +77,7 @@ ShallowWrapper {
           </Unknown>
           <Unknown>
             <StartButton
+              onClick={[Function]}
               status="GAME_OVER"
             >
               Start The Game
@@ -147,6 +148,7 @@ ShallowWrapper {
                       "name": "NAME",
                     }
                   }
+                  status="GAME_OVER"
                 />
               </Col>
               <Col
@@ -193,6 +195,7 @@ ShallowWrapper {
             </Unknown>,
             <Unknown>
               <StartButton
+                onClick={[Function]}
                 status="GAME_OVER"
               >
                 Start The Game
@@ -252,6 +255,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": <StartButton
+                onClick={[Function]}
                 status="GAME_OVER"
               >
                 Start The Game
@@ -264,6 +268,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": "Start The Game",
+                "onClick": [Function],
                 "status": "GAME_OVER",
               },
               "ref": null,
@@ -340,6 +345,7 @@ ShallowWrapper {
                       "name": "NAME",
                     }
                   }
+                  status="GAME_OVER"
                 />
               </Col>
               <Col
@@ -427,6 +433,7 @@ ShallowWrapper {
                       "name": "NAME",
                     }
                   }
+                  status="GAME_OVER"
                 />
               </Col>
               <Col
@@ -510,6 +517,7 @@ ShallowWrapper {
                         "name": "NAME",
                       }
                     }
+                    status="GAME_OVER"
                   />
                 </Col>,
                 <Col
@@ -613,6 +621,7 @@ ShallowWrapper {
                         "name": "NAME",
                       }
                     }
+                    status="GAME_OVER"
                   />,
                   "componentClass": "div",
                   "md": 4,
@@ -639,6 +648,7 @@ ShallowWrapper {
                     "currentPlayer": Object {
                       "name": "NAME",
                     },
+                    "status": "GAME_OVER",
                   },
                   "ref": null,
                   "rendered": null,
@@ -724,6 +734,7 @@ ShallowWrapper {
             </Unknown>
             <Unknown>
               <StartButton
+                onClick={[Function]}
                 status="GAME_OVER"
               >
                 Start The Game
@@ -794,6 +805,7 @@ ShallowWrapper {
                         "name": "NAME",
                       }
                     }
+                    status="GAME_OVER"
                   />
                 </Col>
                 <Col
@@ -840,6 +852,7 @@ ShallowWrapper {
               </Unknown>,
               <Unknown>
                 <StartButton
+                  onClick={[Function]}
                   status="GAME_OVER"
                 >
                   Start The Game
@@ -899,6 +912,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": <StartButton
+                  onClick={[Function]}
                   status="GAME_OVER"
                 >
                   Start The Game
@@ -911,6 +925,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": "Start The Game",
+                  "onClick": [Function],
                   "status": "GAME_OVER",
                 },
                 "ref": null,
@@ -987,6 +1002,7 @@ ShallowWrapper {
                         "name": "NAME",
                       }
                     }
+                    status="GAME_OVER"
                   />
                 </Col>
                 <Col
@@ -1074,6 +1090,7 @@ ShallowWrapper {
                         "name": "NAME",
                       }
                     }
+                    status="GAME_OVER"
                   />
                 </Col>
                 <Col
@@ -1157,6 +1174,7 @@ ShallowWrapper {
                           "name": "NAME",
                         }
                       }
+                      status="GAME_OVER"
                     />
                   </Col>,
                   <Col
@@ -1260,6 +1278,7 @@ ShallowWrapper {
                           "name": "NAME",
                         }
                       }
+                      status="GAME_OVER"
                     />,
                     "componentClass": "div",
                     "md": 4,
@@ -1286,6 +1305,7 @@ ShallowWrapper {
                       "currentPlayer": Object {
                         "name": "NAME",
                       },
+                      "status": "GAME_OVER",
                     },
                     "ref": null,
                     "rendered": null,

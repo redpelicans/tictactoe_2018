@@ -4,6 +4,7 @@ import { BoardPanel, Board, Cell, Message } from '../';
 
 const state = {
   board: ['x', 'x', 'x'],
+  status: 'GAME_OVER',
   currentPlayer: { name: 'Toto' },
   computerPlay: new Function(),
 };
