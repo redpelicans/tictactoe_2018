@@ -1,31 +1,54 @@
-import { compose, withState, withStateHandlers } from 'recompose';
+import { compose, withState, withStateHandlers, lifecycle } from 'recompose';
+import { pathOr } from 'ramda';
 import App from './component';
-import withAuth from '../../hoc/auth';
-import { O, getStatus, GAME_RUNNING } from '../../game';
+import {
+  isBoardFull,
+  computerPlay,
+  getNextBoard,
+  getNewBoard,
+  getNewPlayer,
+  switchPlayer,
+  isComputer,
+  GAME_RUNNING,
+  GAME_OVER,
+} from '../../game';
 
 export const enhance = compose(
   withState('user', 'setUser'),
-  withStateHandlers(({ board, status }) => ({ board, status }), {
-    onAuth: () => user => ({ user }),
-    onStart: (_, { board }) => () => ({
-      board,
-      status: GAME_RUNNING,
-    }),
-    computerPlay: ({ board }) => () => {
-      const firstEmptyCellIndex = board.indexOf(null);
-      if (firstEmptyCellIndex !== -1) {
-        const newBoard = board.map((cell, index) => {
-          if (index === firstEmptyCellIndex) return O;
-          return cell;
-        });
+  withStateHandlers(({ history, board, status }) => ({ history, board, status }), {
+    onPlay: ({ currentPlayer, board, history }, { player, computer }) => i => {
+      const newBoard = getNextBoard({ currentPlayer, board }, i);
+      if (isBoardFull(newBoard)) {
         return {
+          status: GAME_OVER,
           board: newBoard,
-          status: getStatus(newBoard),
+          currentPlayer: undefined,
+          history: [{ id: pathOr(0, [history.length - 1, 'id'], history) + 1, winner: currentPlayer }, ...history],
         };
+      }
+      return {
+        board: newBoard,
+        currentPlayer: switchPlayer({ currentPlayer, player, computer }),
+      };
+    },
+    onStart: (_, { player, computer }) => () => {
+      const currentPlayer = getNewPlayer({ player, computer });
+      const board = getNewBoard();
+      return {
+        board,
+        status: GAME_RUNNING,
+        currentPlayer,
+      };
+    },
+  }),
+  lifecycle({
+    componentDidUpdate(prevProps) {
+      if (prevProps.currentPlayer !== this.props.currentPlayer && isComputer(this.props.currentPlayer)) {
+        const cell = computerPlay(this.props.board);
+        setTimeout(() => this.props.onPlay(cell), 500);
       }
     },
   }),
-  withAuth(),
 );
 
 export default enhance(App);

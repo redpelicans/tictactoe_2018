@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Grid, Row, Col } from 'react-bootstrap';
-import { isStatusOver } from '../../game';
+import { Grid, Row, Col } from 'react-bootstrap';
+import { isComputer, isEmptyCell } from '../../game';
 import './board.css';
 
 export const Message = ({ currentPlayer }) => {
-  const message = currentPlayer ? `${currentPlayer.name}'s turn` : 'A message';
+  const message = currentPlayer ? `${currentPlayer.name}'s turn` : 'Click to start game';
   return (
     <Col xs={12} className="message">
       <span>{message}</span>
@@ -17,26 +17,52 @@ Message.propTypes = {
   currentPlayer: PropTypes.object,
 };
 
-export const Cell = ({ piece }) => (
-  <Col xs={4} className="cell">
-    {piece || '\u00a0'}
+export const PlayedCell = ({ piece }) => (
+  <Col className="cell" xs={4}>
+    {piece}
   </Col>
 );
-Cell.propTypes = {
-  piece: PropTypes.string,
+PlayedCell.propTypes = {
+  piece: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 };
 
-export const Board = ({ status, board, computerPlay }) => (
+export const UnclickableCell = () => (
+  <Col className="cell inactive-cell" xs={4}>
+    {'\u00a0'}
+  </Col>
+);
+
+export const ClickableCell = ({ onClick }) => (
+  <Col className="cell empty-cell" xs={4} onClick={() => onClick()}>
+    {'\u00a0'}
+  </Col>
+);
+ClickableCell.propTypes = {
+  onClick: PropTypes.func,
+};
+
+export const Cell = ({ currentPlayer, piece, onClick }) => {
+  if (isEmptyCell(piece)) {
+    if (!currentPlayer || isComputer(currentPlayer)) return <UnclickableCell />;
+    return <ClickableCell onClick={onClick} />;
+  }
+  return <PlayedCell piece={piece} />;
+};
+
+Cell.propTypes = {
+  piece: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  onClick: PropTypes.func,
+  currentPlayer: PropTypes.object,
+};
+
+export const Board = ({ board, currentPlayer, onPlay }) => (
   <div>
     <Grid className="board">
       <Row>
         {/* eslint-disable react/no-array-index-key */}
-        {board.map((piece, i) => <Cell key={i} piece={piece} />)}
-      </Row>
-      <Row>
-        <Button className="computerPlay" disabled={isStatusOver(status)} onClick={computerPlay}>
-          Computer Play
-        </Button>
+        {board.map((piece, i) => (
+          <Cell key={i} currentPlayer={currentPlayer} onClick={() => onPlay(i)} piece={piece} />
+        ))}
       </Row>
     </Grid>
   </div>
@@ -44,24 +70,23 @@ export const Board = ({ status, board, computerPlay }) => (
 
 Board.propTypes = {
   board: PropTypes.array.isRequired,
-  status: PropTypes.string.isRequired,
-  computerPlay: PropTypes.func.isRequired,
+  onPlay: PropTypes.func.isRequired,
+  currentPlayer: PropTypes.object,
 };
 
-export const BoardPanel = ({ status, board, currentPlayer, computerPlay }) => (
+export const BoardPanel = ({ board, onPlay, currentPlayer }) => (
   <Grid className="panel">
     <Row>
       <Message currentPlayer={currentPlayer} />
     </Row>
     <Row>
-      <Board status={status} board={board} computerPlay={computerPlay} />
+      <Board board={board} onPlay={onPlay} currentPlayer={currentPlayer} />
     </Row>
   </Grid>
 );
 
 BoardPanel.propTypes = {
-  status: PropTypes.string.isRequired,
   board: PropTypes.array.isRequired,
   currentPlayer: PropTypes.object,
-  computerPlay: PropTypes.func,
+  onPlay: PropTypes.func.isRequired,
 };

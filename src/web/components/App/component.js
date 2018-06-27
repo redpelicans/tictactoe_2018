@@ -28,7 +28,7 @@ StartButton.propTypes = {
   onClick: PropTypes.func.isRequired,
 };
 
-const App = ({ board, status, player, currentPlayer, history, onStart, computerPlay }) => {
+const App = ({ board, status, player, currentPlayer, history, onStart, onPlay }) => {
   return (
     <Grid>
       <Header player={player}>
@@ -49,7 +49,7 @@ const App = ({ board, status, player, currentPlayer, history, onStart, computerP
               <PiePanel history={history} player={player} />
             </Col>
             <Col md={4} xs={12}>
-              <BoardPanel status={status} computerPlay={computerPlay} board={board} currentPlayer={currentPlayer} />
+              <BoardPanel status={status} board={board} onPlay={onPlay} currentPlayer={currentPlayer} />
             </Col>
             <Col md={4} xs={12}>
               <HistoryPanel history={history} />
@@ -68,7 +68,7 @@ App.propTypes = {
   status: PropTypes.string.isRequired,
   history: PropTypes.array.isRequired,
   onStart: PropTypes.func.isRequired,
-  computerPlay: PropTypes.func.isRequired,
+  onPlay: PropTypes.func.isRequired,
 };
 
 export default App;
