@@ -6,8 +6,8 @@ import { X, O, GAME_OVER } from './game';
 
 const { pathname } = document.location;
 const name = pathname.slice(1) || 'Unknown player';
-const player = { name };
-const computer = { name: 'computer', isComputer: true };
+const player = { name, piece: O };
+const computer = { name: 'computer', isComputer: true, piece: X };
 const board = [X, O, X, null, null, X, O, null, null];
 const history = [{ id: 1, winner: player }, { id: 2, winner: computer }, { id: 3, winner: player }, { id: 4 }];
 
