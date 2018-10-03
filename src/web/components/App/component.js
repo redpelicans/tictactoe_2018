@@ -5,39 +5,35 @@ import { BoardPanel } from '../Board';
 import { PiePanel } from '../Pie';
 import { HistoryPanel } from '../History';
 import { Header, HeaderLeft, HeaderRight } from '../Header';
-import { Icon, Title } from '../Widgets';
-import './app.css';
+import { Title } from '../Widgets';
 import { isStatusOver } from '../../game';
+import './app.css';
 
-const StartButton = ({ status, children, onClick }) => {
-  if (isStatusOver(status)) {
-    return (
-      <div className="start-button">
-        <Button className="start-game-button" bsSize="lg" bsStyle="primary" onClick={onClick}>
-          {children}
-        </Button>
-      </div>
-    );
-  }
-  return <div />;
-};
+const StartButton = ({ status, onStart, children }) => (
+  <div className="start-button">
+    <Button disabled={!isStatusOver(status)} bsSize="lg" bsStyle="primary" onClick={onStart}>
+      {' '}
+      {children}{' '}
+    </Button>
+  </div>
+);
 
 StartButton.propTypes = {
   status: PropTypes.string.isRequired,
   children: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onStart: PropTypes.func.isRequired,
 };
 
-const App = ({ board, status, player, currentPlayer, history, onStart, computerPlay }) => {
+const App = ({ board, winner, player, currentPlayer, status, history, startGame, played }) => {
+  const handleStart = () => startGame();
   return (
     <Grid>
       <Header player={player}>
         <HeaderLeft>
-          <Icon type="trophy" />
           <Title name="TicTacToe" />
         </HeaderLeft>
         <HeaderRight>
-          <StartButton status={status} onClick={onStart}>
+          <StartButton status={status} onStart={handleStart}>
             Start The Game
           </StartButton>
         </HeaderRight>
@@ -49,7 +45,7 @@ const App = ({ board, status, player, currentPlayer, history, onStart, computerP
               <PiePanel history={history} player={player} />
             </Col>
             <Col md={4} xs={12}>
-              <BoardPanel status={status} computerPlay={computerPlay} board={board} currentPlayer={currentPlayer} />
+              <BoardPanel winner={winner} board={board} currentPlayer={currentPlayer} onPlay={played} />
             </Col>
             <Col md={4} xs={12}>
               <HistoryPanel history={history} />
@@ -64,11 +60,12 @@ const App = ({ board, status, player, currentPlayer, history, onStart, computerP
 App.propTypes = {
   board: PropTypes.array.isRequired,
   player: PropTypes.object.isRequired,
+  winner: PropTypes.object,
   currentPlayer: PropTypes.object,
   status: PropTypes.string.isRequired,
   history: PropTypes.array.isRequired,
-  onStart: PropTypes.func.isRequired,
-  computerPlay: PropTypes.func.isRequired,
+  startGame: PropTypes.func.isRequired,
+  played: PropTypes.func.isRequired,
 };
 
 export default App;

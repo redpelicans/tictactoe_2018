@@ -1,31 +1,11 @@
-import { compose, withState, withStateHandlers } from 'recompose';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { startGame, played } from '../../actions';
 import App from './component';
-import withAuth from '../../hoc/auth';
-import { O, getStatus, GAME_RUNNING } from '../../game';
 
-export const enhance = compose(
-  withState('user', 'setUser'),
-  withStateHandlers(({ board, status }) => ({ board, status }), {
-    onAuth: () => user => ({ user }),
-    onStart: (_, { board }) => () => ({
-      board,
-      status: GAME_RUNNING,
-    }),
-    computerPlay: ({ board }) => () => {
-      const firstEmptyCellIndex = board.indexOf(null);
-      if (firstEmptyCellIndex !== -1) {
-        const newBoard = board.map((cell, index) => {
-          if (index === firstEmptyCellIndex) return O;
-          return cell;
-        });
-        return {
-          board: newBoard,
-          status: getStatus(newBoard),
-        };
-      }
-    },
-  }),
-  withAuth(),
-);
+const actions = { startGame, played };
+const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch);
+const mapStateToProps = state => state;
 
+const enhance = connect(mapStateToProps, mapDispatchToProps);
 export default enhance(App);

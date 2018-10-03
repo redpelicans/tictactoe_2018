@@ -1,25 +1,36 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import createLogger from 'redux-logger';
+import thunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import App from './components/App';
-import { X, O, GAME_OVER } from './game';
+import reducer from './reducers';
+
+import { X, O, GAME_OVER, getEmptyBoard } from './game';
 
 const { pathname } = document.location;
 const name = pathname.slice(1) || 'Unknown player';
-const player = { name };
-const computer = { name: 'computer', isComputer: true };
-const board = [X, O, X, null, null, X, O, null, null];
-const history = [{ id: 1, winner: player }, { id: 2, winner: computer }, { id: 3, winner: player }, { id: 4 }];
+const player = { name, piece: X };
+const computer = { name: 'computer', isComputer: true, piece: O };
 
-const state = {
-  currentPlayer: player,
+const initialState = {
   status: GAME_OVER,
   player,
   computer,
-  board,
-  history,
+  board: getEmptyBoard(),
+  history: [],
 };
 
-console.log('mounting React ...'); // eslint-disable-line no-console
+const store = createStore(reducer, initialState, composeWithDevTools(applyMiddleware(thunk, createLogger)));
 const mountNode = window.document.getElementById('root');
-render(<App {...state} />, mountNode);
+const ROOT = (
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+
+render(ROOT, mountNode);
+console.log('app mounted.'); // eslint-disable-line no-console
