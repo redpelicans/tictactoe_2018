@@ -17,6 +17,7 @@ const player = { name, piece: X };
 const computer = { name: 'computer', isComputer: true, piece: O };
 
 const initialState = {
+  titleIcon: { icon: 'trophy' },
   player,
   computer,
   history: [],
