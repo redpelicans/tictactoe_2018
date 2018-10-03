@@ -9,7 +9,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import App from './components/App';
 import reducer from './reducers';
 
-import { X, O, GAME_OVER, getEmptyBoard } from './game';
+import { X, O, getEmptyBoard } from './game';
 
 const { pathname } = document.location;
 const name = pathname.slice(1) || 'Unknown player';
@@ -17,11 +17,11 @@ const player = { name, piece: X };
 const computer = { name: 'computer', isComputer: true, piece: O };
 
 const initialState = {
-  status: GAME_OVER,
   player,
   computer,
-  board: getEmptyBoard(),
   history: [],
+  board: getEmptyBoard(),
+  status: 'STATUS',
 };
 
 const store = createStore(reducer, initialState, composeWithDevTools(applyMiddleware(thunk, createLogger)));
