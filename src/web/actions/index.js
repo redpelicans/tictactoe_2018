@@ -7,7 +7,7 @@ export const HAS_PLAYED = 'HAS_PLAYED';
 const computerPlay = () => (dispatch, getState) => {
   const { board } = getState();
   const emptyCells = board.map((x, i) => !x && i).filter(x => x === 0 || x !== false);
-  if (emptyCells.length) setTimeout(() => dispatch(played(emptyCells[0])), 500);
+  if (emptyCells.length) setTimeout(() => dispatch(played(emptyCells[0])), 1000);
 };
 
 export const startGame = () => (dispatch, getState) => {

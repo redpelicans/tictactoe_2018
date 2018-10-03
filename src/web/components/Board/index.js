@@ -1,10 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Row, Col } from 'react-bootstrap';
+import { isComputer, isEmptyCell, isFruit } from '../../game';
 import './board.css';
 
-export const Message = ({ currentPlayer }) => {
-  const message = currentPlayer ? `${currentPlayer.name}'s turn` : 'A message';
+export const Message = ({ winner, currentPlayer }) => {
+  let message;
+  if (winner) {
+    message = `${winner.name} is the winner!`;
+  } else if (currentPlayer) {
+    message = `${currentPlayer.name}'s turn to play`;
+  } else {
+    message = 'Game is over.';
+  }
   return (
     <Col xs={12} className="message">
       <span>{message}</span>
@@ -14,39 +22,86 @@ export const Message = ({ currentPlayer }) => {
 
 Message.propTypes = {
   currentPlayer: PropTypes.object,
+  winner: PropTypes.object,
 };
 
-export const Cell = ({ piece }) => (
-  <Col xs={4} className="cell">
-    {piece || '\u00a0'}
+const PlayedCell = ({ piece }) => (
+  <Col className="cell" xs={4}>
+    {piece}
   </Col>
 );
-Cell.propTypes = {
+
+PlayedCell.propTypes = {
   piece: PropTypes.string,
 };
 
-export const Board = ({ board }) => (
-  <div>
-    <Grid className="board">
-      <Row>
-        {/* eslint-disable react/no-array-index-key */}
-        {board.map((piece, i) => <Cell key={i} piece={piece} />)}
-      </Row>
-    </Grid>
-  </div>
+const Fruit = ({ piece }) => {
+  const { icon, color } = piece;
+  return (
+    <Col className="fruit" style={{ color }} xs={4}>
+      <i className={`fa fa-${icon}`} />
+    </Col>
+  );
+};
+
+Fruit.propTypes = {
+  piece: PropTypes.string,
+};
+
+const DeadCell = () => (
+  <Col className="cell inactive-cell" xs={4}>
+    {'\u00a0'}
+  </Col>
+);
+
+const ClickableCell = ({ onClick }) => (
+  <Col className="cell empty-cell" xs={4} onClick={() => onClick()}>
+    {'\u00a0'}
+  </Col>
+);
+
+ClickableCell.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};
+
+export const Cell = ({ currentPlayer, piece, onClick }) => {
+  if (isFruit(piece)) return <Fruit piece={piece} />;
+  if (isEmptyCell(piece)) {
+    if (!currentPlayer || isComputer(currentPlayer)) return <DeadCell />;
+    return <ClickableCell onClick={onClick} />;
+  }
+  return <PlayedCell piece={piece} />;
+};
+
+Cell.propTypes = {
+  piece: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  onClick: PropTypes.func.isRequired,
+  currentPlayer: PropTypes.object,
+};
+
+export const Board = ({ currentPlayer, board, onPlay }) => (
+  <Grid className="board">
+    <Row>
+      {board.map(
+        (piece, i) => <Cell key={i} currentPlayer={currentPlayer} piece={piece} onClick={() => onPlay(i)} />, // eslint-disable-line react/no-array-index-key
+      )}
+    </Row>
+  </Grid>
 );
 
 Board.propTypes = {
   board: PropTypes.array.isRequired,
+  onPlay: PropTypes.func.isRequired,
+  currentPlayer: PropTypes.object,
 };
 
-export const BoardPanel = ({ board, currentPlayer }) => (
+export const BoardPanel = ({ board, winner, currentPlayer, onPlay }) => (
   <Grid className="panel">
     <Row>
-      <Message currentPlayer={currentPlayer} />
+      <Message currentPlayer={currentPlayer} winner={winner} />
     </Row>
     <Row>
-      <Board board={board} />
+      <Board currentPlayer={currentPlayer} board={board} onPlay={onPlay} />
     </Row>
   </Grid>
 );
@@ -54,4 +109,6 @@ export const BoardPanel = ({ board, currentPlayer }) => (
 BoardPanel.propTypes = {
   board: PropTypes.array.isRequired,
   currentPlayer: PropTypes.object,
+  winner: PropTypes.object,
+  onPlay: PropTypes.func.isRequired,
 };
