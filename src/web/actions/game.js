@@ -1,4 +1,5 @@
 import { isComputer, switchPlayer, getEmptyBoard, getNewPlayer, getNextBoard, isGameOver } from '../game';
+import { loadFruits } from './fruits';
 
 export const START_GAME = 'START_GAME';
 export const END_OF_GAME = 'END_OF_GAME';
@@ -32,5 +33,5 @@ export const played = cell => (dispatch, getState) => {
 };
 
 export const gameOver = (board, winner) => dispatch => {
-  dispatch({ type: END_OF_GAME, board, winner });
+  dispatch(loadFruits()).then(() => dispatch({ type: END_OF_GAME, board, winner }));
 };

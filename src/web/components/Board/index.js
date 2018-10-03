@@ -45,7 +45,7 @@ const Fruit = ({ piece }) => {
 };
 
 Fruit.propTypes = {
-  piece: PropTypes.string,
+  piece: PropTypes.object,
 };
 
 const DeadCell = () => (

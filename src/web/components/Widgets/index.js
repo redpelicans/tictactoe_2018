@@ -3,11 +3,15 @@ import PropTypes from 'prop-types';
 import { Glyphicon, InputGroup } from 'react-bootstrap';
 import './widgets.css';
 
-export const Icon = ({ fruit }) => (
-  <div className="title-icon">
-    <i className={`fa fa-${fruit.icon}`} />
-  </div>
-);
+export const Icon = ({ fruit }) => {
+  if (!fruit) return false;
+  const { icon, color } = fruit;
+  return (
+    <div className="title-icon" style={{ color }}>
+      <i className={`fa fa-${icon}`} />
+    </div>
+  );
+};
 
 Icon.propTypes = {
   fruit: PropTypes.object.isRequired,

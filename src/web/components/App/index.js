@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { startGame, played } from '../../actions';
+import { startGame, played } from '../../actions/game';
 import App from './component';
 
 const actions = { startGame, played };

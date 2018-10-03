@@ -8,6 +8,7 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import App from './components/App';
 import reducer from './reducers';
+import { loadTitleFruit } from './actions/fruits';
 
 import { X, O, GAME_OVER, getEmptyBoard } from './game';
 
@@ -17,7 +18,7 @@ const player = { name, piece: X };
 const computer = { name: 'computer', isComputer: true, piece: O };
 
 const initialState = {
-  titleIcon: { icon: 'trophy' },
+  titleIcon: { icon: 'question' },
   status: GAME_OVER,
   player,
   computer,
@@ -33,5 +34,6 @@ const ROOT = (
   </Provider>
 );
 
+store.dispatch(loadTitleFruit());
 render(ROOT, mountNode);
 console.log('app mounted.'); // eslint-disable-line no-console
