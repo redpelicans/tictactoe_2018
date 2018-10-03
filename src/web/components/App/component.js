@@ -5,7 +5,7 @@ import { BoardPanel } from '../Board';
 import { PiePanel } from '../Pie';
 import { HistoryPanel } from '../History';
 import { Header, HeaderLeft, HeaderRight } from '../Header';
-import { Title } from '../Widgets';
+import { Icon, Title } from '../Widgets';
 import { isStatusOver } from '../../game';
 import './app.css';
 
@@ -24,12 +24,13 @@ StartButton.propTypes = {
   onStart: PropTypes.func.isRequired,
 };
 
-const App = ({ board, winner, player, currentPlayer, status, history, startGame, played }) => {
+const App = ({ titleIcon, board, winner, player, currentPlayer, status, history, startGame, played }) => {
   const handleStart = () => startGame();
   return (
     <Grid>
       <Header player={player}>
         <HeaderLeft>
+          <Icon fruit={titleIcon} />
           <Title name="TicTacToe" />
         </HeaderLeft>
         <HeaderRight>
@@ -66,6 +67,7 @@ App.propTypes = {
   history: PropTypes.array.isRequired,
   startGame: PropTypes.func.isRequired,
   played: PropTypes.func.isRequired,
+  titleIcon: PropTypes.object,
 };
 
 export default App;
