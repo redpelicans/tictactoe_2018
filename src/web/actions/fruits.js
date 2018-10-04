@@ -19,8 +19,7 @@ export const loadTitleFruit = () => dispatch =>
 //     });
 // }
 
-// const getOneFruit = () => axios.get('https://hook.io/eric-basley/fruit').then(prop('data'));
-const getOneFruit = () => axios.get('/api/fruit').then(prop('data'));
+const getOneFruit = () => axios.get('https://hook.io/eric-basley/fruit').then(prop('data'));
 
 const loadOneFruit = index => dispatch =>
   getOneFruit().then(fruit => {
