@@ -9,7 +9,7 @@ export const HAS_PLAYED = 'HAS_PLAYED';
 const computerPlay = () => (dispatch, getState) => {
   const {
     config: {
-      apitServer: { host, port },
+      apiServer: { host, port },
     },
   } = getState();
   const url = `http://${host}:${port}/api/computer/play`;
@@ -19,12 +19,8 @@ const computerPlay = () => (dispatch, getState) => {
     computer: computer.piece,
     player: player.piece,
   };
-  const options = {
-    method: 'POST',
-    data,
-    url,
-  };
-  axios(options)
+  axios
+    .post(url, data)
     .then(({ data: res }) => dispatch(played(res.move)))
     .catch(console.error);
 };
@@ -41,7 +37,7 @@ export const played = cell => (dispatch, getState) => {
   const state = getState();
   const {
     config: {
-      apitServer: { host, port },
+      apiServer: { host, port },
     },
     player,
     computer,
@@ -49,8 +45,8 @@ export const played = cell => (dispatch, getState) => {
   const newBoard = getNextBoard(state, cell);
   const data = { board: newBoard };
   const url = `http://${host}:${port}/api/game/hasawinner`;
-  const options = { method: 'POST', data, url };
-  axios(options)
+  axios
+    .post(url, data)
     .then(({ data: res }) => {
       const winner = res.winner && (res.winner === computer.piece ? computer : player);
 
