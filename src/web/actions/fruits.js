@@ -39,7 +39,7 @@ const loadFruitsUntilPaperPlane = index => dispatch =>
 
 export const loadFruits = () => dispatch => {
   // const promises = times(i => dispatch(loadOneFruit(i)), 9);
-  // const promises = times(i => dispatch(loadFiveFruits(i)), 9);
-  const promises = times(i => dispatch(loadFruitsUntilPaperPlane(i)), 9);
+  const promises = times(i => dispatch(loadFiveFruits(i)), 9);
+  // const promises = times(i => dispatch(loadFruitsUntilPaperPlane(i)), 9);
   return Promise.all(promises);
 };

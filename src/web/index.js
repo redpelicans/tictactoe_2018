@@ -18,6 +18,7 @@ const player = { name, piece: X };
 const computer = { name: 'computer', isComputer: true, piece: O };
 
 const initialState = {
+  config: { apitServer: { host: 'rp5.redpelicans.com', port: 8888 } },
   titleIcon: { icon: 'question' },
   status: GAME_OVER,
   player,
