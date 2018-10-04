@@ -62,6 +62,7 @@
     "react-dev-utils": "^5.0.1",
     "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
     "react-svg-piechart": "^2.1.0",
     "recompose": "^0.27.1",
     "redux": "^4.0.0",

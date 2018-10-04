@@ -2,6 +2,10 @@
   display: inline-block;
 }
 
+.spacer {
+  margin-left: 20px;
+}
+
 .content {
   min-height: 55vh;
   margin-top: 30px;
