@@ -1,90 +1,107 @@
 import React from 'react';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import PropTypes from 'prop-types';
-import { Grid, Row, Col, Jumbotron, FormGroup, InputGroup, FormControl, Button } from 'react-bootstrap';
-import { BeforeInput } from '../Widgets';
+import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import withStyles from '@material-ui/core/styles/withStyles';
+import TextField from '@material-ui/core/TextField';
+import { Form, Field } from 'react-final-form';
 
-class MyForm extends React.Component {
-  state = {
-    username: '',
-    password: '',
-  };
+/* eslint-disable react/prop-types */
+const MyTextField = ({ input: { name, onChange, value, ...restInput }, meta, ...rest }) => (
+  <TextField
+    {...rest}
+    name={name}
+    helperText={meta.touched ? meta.error : undefined}
+    error={meta.error && meta.touched}
+    inputProps={restInput}
+    onChange={onChange}
+    value={value}
+  />
+);
+/* eslint-disable react/prop-types */
 
-  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+const styles = theme => ({
+  main: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    width: 'auto',
+  },
+  paper: {
+    marginTop: theme.spacing.unit * 8,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    padding: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 3}px ${theme.spacing.unit * 3}px`,
+  },
+  avatar: {
+    margin: theme.spacing.unit,
+    backgroundColor: theme.palette.secondary.main,
+  },
+  form: {
+    width: '100%', // Fix IE 11 issue.
+    marginTop: theme.spacing.unit,
+  },
+  submit: {
+    marginTop: theme.spacing.unit * 3,
+  },
+});
 
-  isUsernameValid = username => !!username.match(/^.{3,30}$/);
-  isPasswordValid = password => !!password.match(/^.{3,30}$/);
-
-  isFormIncomplete = () => {
-    const { username, password } = this.state;
-
-    if (this.isUsernameValid(username) === false || this.isPasswordValid(password) === false) {
-      return true;
-    }
-    return false;
-  };
-
-  checkAuth = e => {
-    const { username, password } = this.state;
-    e.preventDefault();
-
-    if (this.isFormIncomplete() === false) {
-      this.props.onAuth({ username, password });
-    }
-  };
-
-  checkUsername = () => {
-    const { username } = this.state;
-
-    if (this.isUsernameValid(username)) return 'success';
-    else if (username.length > 30) return 'error';
-    return null;
-  };
-
-  checkPassword = () => {
-    const { password } = this.state;
-
-    if (this.isPasswordValid(password)) return 'success';
-    else if (password.length > 30) return 'error';
-    return null;
-  };
-
-  render() {
-    const { username, password } = this.state;
-
-    return (
-      <Grid>
-        <Row>
-          <Col md={4} xs={12} />
-          <Col md={4} xs={12}>
-            <Jumbotron className="content">
-              <form onChange={this.handleChange} className="myForm" onSubmit={this.checkAuth}>
-                <FormGroup validationState={this.checkUsername()}>
-                  <InputGroup>
-                    <BeforeInput glyph="user" />
-                    <FormControl type="text" value={username} name="username" placeholder="username" />
-                  </InputGroup>
-                </FormGroup>
-                <FormGroup validationState={this.checkPassword()}>
-                  <InputGroup>
-                    <BeforeInput glyph="lock" />
-                    <FormControl type="password" value={password} name="password" placeholder="password" />
-                  </InputGroup>
-                </FormGroup>
-                <Button type="submit" disabled={this.isFormIncomplete()}>
-                  Send
-                </Button>
-              </form>
-            </Jumbotron>
-          </Col>
-          <Col md={4} xs={12} />
-        </Row>
-      </Grid>
-    );
+const validate = values => {
+  const errors = {};
+  if (!values.name) {
+    errors.name = 'Required';
   }
-}
+  if (!values.password) {
+    errors.password = 'Required';
+  }
+  return errors;
+};
 
-MyForm.propTypes = {
+const LoginForm = ({ onAuth, classes }) => {
+  return (
+    <main className={classes.main}>
+      <CssBaseline />
+      <Paper className={classes.paper}>
+        <Avatar className={classes.avatar}>
+          <LockOutlinedIcon />
+        </Avatar>
+        <Typography component="h1" variant="h5">
+          Sign in
+        </Typography>
+        <Form
+          onSubmit={({ name }) => onAuth({ name })}
+          validate={validate}
+          render={({ handleSubmit, reset, valid, pristine }) => (
+            <form onSubmit={handleSubmit}>
+              <div>
+                <Field name="name" component={MyTextField} type="text" label="Name" />
+              </div>
+              <div>
+                <Field name="password" component={MyTextField} type="text" label="Password" />
+              </div>
+              <div className={classes.submit}>
+                <Button color="primary" type="submit" variant="contained" disabled={!valid}>
+                  Submit
+                </Button>
+                <Button type="button" onClick={reset} disabled={pristine}>
+                  Reset
+                </Button>
+              </div>
+            </form>
+          )}
+        />
+      </Paper>
+    </main>
+  );
+};
+
+LoginForm.propTypes = {
+  classes: PropTypes.object.isRequired,
   onAuth: PropTypes.func.isRequired,
 };
 
-export default MyForm;
+export default withStyles(styles)(LoginForm);
